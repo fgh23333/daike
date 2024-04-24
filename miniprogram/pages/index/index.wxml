@@ -1,0 +1,25 @@
+<view class="flex-col page">
+	<view class="groundContainer">
+		<image class="shrink-0 image" src="../../image/22.png" />
+		<view class="userInfo">
+			<image class="userIcon" src="../../image/creative.png" />
+			<text class="userName">
+				靳取
+				<!-- {{ username }} -->
+			</text>
+			<text class="personal">个人</text>
+			<view class="userButton" bindtap="goto">账户信息
+				<van-icon name="arrow" />
+			</view>
+		</view>
+		<view class="list">
+			<image src="../../image/recbg1.png" class="image1" />
+			<image src="../../image/recbg2.png" class="image2" />
+			<text class="userList">代课订单</text>
+			<view class="allUserListHover" bindtap="loguUserList">
+				<text class="allUserList">全部订单</text>
+				<van-icon name="arrow" class="arrow" />
+			</view>
+		</view>
+	</view>
+</view>

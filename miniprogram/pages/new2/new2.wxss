@@ -1,0 +1,229 @@
+.mt-52-5 {
+  margin-top: 104.72rpx;
+}
+.biaodanshuxing{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-radius: 10px;
+  background-color: #ffffff; /* 设置表单的背景颜色 */
+  padding: 20px; /* 设置表单的内边距 */
+  z-index: 2;
+}
+.ml-7 {
+  margin-left: 13.96rpx;
+}
+
+.page {
+  padding-bottom: 872.67rpx;
+  background-color: #819ee7;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.section {
+  padding: 10.97rpx 0 300rpx 34.31rpx;
+  
+  /* 原来的https://ide.code.fun/api/image?token=6622366e9554750011977151&name=1fa372c56d3551682e756b0bb0c26819.png */
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.text {
+  margin-top: 118.01rpx;
+  color: #ffffff;
+  font-size: 59.84rpx;
+  font-family: AlibabaPuHuiTi;
+  line-height: 56.13rpx;
+}
+.image {
+  margin-right: -37.9rpx;
+  width: 260.31rpx;
+  height: 261.3rpx;
+}
+.section_2 {
+  margin-top: 0rpx;
+  padding-left: 30.92rpx;
+  background-color: #ffffff;
+}
+.group {
+  border-bottom: solid 1rpx #f1f1f1;
+}
+.group_2 {
+  padding: 38.52rpx 0 36.3rpx;
+  border-bottom: solid 1rpx #f1f1f1;
+
+}
+.font_1 {
+  font-size: 27.93rpx;
+  font-family: AlibabaPuHuiTi;
+  line-height: 25.41rpx;
+  color: #606266;
+  align-items: center;
+}
+.text_2 {
+  line-height: 25.49rpx;
+}
+.group_3 {
+  display: flex;
+  margin-right: 29.34rpx;
+  justify-items: right;
+}
+.image_2 {
+  width: 12.97rpx;
+  height: 22.94rpx;
+}
+.group_4 {
+  padding: 38.52rpx 0 36.3rpx;
+  align-items: center;
+}
+.text_4 {
+  line-height: 24.73rpx;
+}
+.text_5 {
+  margin-right: 26.01rpx;
+}
+.input {
+  padding: 36.8rpx 0 36.8rpx;
+  border-bottom: solid 1rpx #f1f1f1;
+}
+.text_7 {
+  line-height: 25.31rpx;
+  align-items:center;
+}
+.text_8 {
+  margin-right: 28.66rpx;
+}
+.group_5 {
+  padding: 39.61rpx 2.91rpx 36.3rpx;
+  border-bottom: solid 1rpx #f1f1f1;
+}
+.text_9 {
+  line-height: 25.27rpx;
+}
+.group_6 {
+  margin-right: 26.41rpx;
+}
+.group_7 {
+  padding: 39.61rpx 2.91rpx 35.72rpx;
+}
+.text_11 {
+  line-height: 25.01rpx;
+}
+.text_22 {
+  margin-right: 19.09rpx;
+}
+.group_8 {
+  padding: 39.26rpx 0 36.24rpx;
+}
+.text_13 {
+  font-weight: 800;
+  line-height: 26.21rpx;
+}
+.text_23 {
+  margin-right: 25.47rpx;
+}
+.font {
+  font-size: 27.93rpx;
+  font-family: AlibabaPuHuiTi;
+  line-height: 25.41rpx;
+  color: #bbbbbb;
+}
+.text_10 {
+  line-height: 25.17rpx;
+}
+.text_1 {
+  line-height: 25.55rpx;
+}
+.text_6 {
+  line-height: 25.71rpx;
+}
+.text_3 {
+  line-height: 24rpx;
+}
+.text_14 {
+  line-height: 25.57rpx;
+}
+.section_3 {
+  padding: 20.94rpx 25.45rpx 23.94rpx 33.99rpx;
+  background-color: #ffffff;
+}
+.text_19 {
+  line-height: 26.03rpx;
+}
+.text-wrapper {
+  background-color: #ffffff;
+  border-radius: 4.99rpx;
+  width: 20px;
+  height: 50rpx;
+  line-height: 50rpx;
+  border-left: solid 1rpx #d3d3d3;
+  border-right: solid 1rpx #d3d3d3;
+  border-top: solid 1rpx #d3d3d3;
+  border-bottom: solid 1rpx #d3d3d3;
+  display: inline-block;
+}
+.text-wrapper_2 {
+  background-color: #eef5ff;
+  border-radius: 4.99rpx;
+  width: 20px;
+  height: 50rpx;
+  border-left: solid 1rpx #1b78ff;
+  border-right: solid 1rpx #1b78ff;
+  border-top: solid 1rpx #1b78ff;
+  border-bottom: solid 1rpx #1b78ff;
+  line-height: 50rpx;
+  display: inline-block;
+}
+.input_2 {
+  background-color: #ffffff;
+}
+.section_4 {
+  background-color: #ffffff;
+}
+.group_1{
+  display: flex;
+  align-items: center;
+}
+.textarea1{
+  display: flex;
+  
+}
+.button_henguolai{
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: row;
+}
+.button_1{
+  background-color: lightblue;
+  border-bottom: solid 1rpx #1b78ff;
+}
+.button_2{
+  width:50px;
+}
+
+.yesbutton {
+	width: 80px;
+	display: inline-block;
+	background-color: #07c160;
+	text-align: center;
+	margin: 10px;
+	border-radius: 1px;
+	height: 30px;
+	line-height: 30px;
+	padding: 0px 20px;
+	color: white;
+}
+
+.nobutton {
+	width: 80px;
+	display: inline-block;
+	background-color: #ee0a24;
+	text-align: center;
+	margin: 10px;
+	border-radius: 1px;
+	height: 30px;
+	line-height: 30px;
+	padding: 0px 20px;
+	color: white;
+}

@@ -1,0 +1,114 @@
+.page {
+  padding-bottom: 397.5px;
+  background-color: #f3f5f7;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.page .groundContainer {
+  position: relative;
+}
+.page .groundContainer .image {
+  width: 100vw;
+  height: 30vh;
+}
+.page .groundContainer .userInfo {
+  width: 100vw;
+  height: 120rpx;
+  position: absolute;
+  top: 50rpx;
+}
+.page .groundContainer .userInfo .userIcon {
+  position: absolute;
+  left: 50rpx;
+  width: 120rpx;
+  height: 120rpx;
+  padding: 20rpx;
+  border-radius: 50%;
+  background-color: white;
+}
+.page .groundContainer .userInfo .userName {
+  height: 50rpx;
+  line-height: 50rpx;
+  color: white;
+  position: absolute;
+  left: 200rpx;
+  top: -50rpx;
+  font-size: 36rpx;
+}
+.page .groundContainer .userInfo .personal {
+  width: 64rpx;
+  height: 40rpx;
+  font-size: 24rpx;
+  display: inline-block;
+  line-height: 40rpx;
+  text-align: center;
+  color: #0081EC;
+  background-color: #C5E6FE;
+  position: absolute;
+  left: 200rpx;
+  top: 70rpx;
+}
+.page .groundContainer .userInfo .userButton {
+  position: absolute;
+  right: -30rpx;
+  top: 35rpx;
+  font-size: 20rpx;
+  line-height: 50rpx;
+  width: 180rpx;
+  padding: 0rpx 30rpx;
+  text-align: left;
+  background: linear-gradient(to right, #ffa140, #ff731b);
+  border-radius: 40rpx;
+  color: white;
+}
+.page .groundContainer .list {
+  position: absolute;
+  width: 90vw;
+  left: 5vw;
+  top: 20vh;
+}
+.page .groundContainer .list .image1 {
+  width: 90vw;
+  margin: 0 auto;
+  height: 225rpx;
+  display: block;
+  z-index: 1;
+}
+.page .groundContainer .list .image2 {
+  display: block;
+  height: 280rpx;
+  width: 98vw;
+  z-index: 2;
+  position: absolute;
+  top: -30rpx;
+  left: -30rpx;
+  margin: 0 auto;
+}
+.page .groundContainer .list .userList {
+  color: #333;
+  position: absolute;
+  top: 10rpx;
+  left: 40rpx;
+  font-size: 28rpx;
+}
+.page .groundContainer .list .allUserListHover .allUserList {
+  color: #666;
+  position: absolute;
+  top: 10rpx;
+  right: 50rpx;
+  z-index: 10;
+  font-size: 26rpx;
+  display: block;
+}
+.page .groundContainer .list .allUserListHover .arrow {
+  z-index: 15;
+  color: #666;
+  position: absolute;
+  top: 20rpx;
+  right: 14px;
+  width: 18rpx;
+  height: 18rpx;
+  font-size: 24rpx;
+}

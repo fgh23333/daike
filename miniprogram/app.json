@@ -1,0 +1,45 @@
+{
+	"pages": [
+		"pages/home/home",
+		"pages/me/me",
+		"pages/new2/new2",
+		"pages/index/index",
+		"pages/new/new"
+	],
+	"window": {
+		"navigationBarTextStyle": "black",
+		"navigationBarBackgroundColor": "#ffffff",
+		"navigationBarTitleText": "代课小程序",
+		"navigationStyle": "default"
+	},
+	"style": "v2",
+	"tabBar": {
+		"list": [
+			{
+				"pagePath": "pages/home/home",
+				"text": "主页",
+				"iconPath": "image/home.png",
+				"selectedIconPath": "image/home_fill.png"
+			},
+			{
+				"pagePath": "pages/new2/new2",
+				"text": "发布",
+				"iconPath": "image/new.png",
+				"selectedIconPath": "image/new_fill.png"
+			},
+			{
+				"pagePath": "pages/index/index",
+				"text": "我的",
+				"iconPath": "image/people.png",
+				"selectedIconPath": "image/people_fill.png"
+			}
+		]
+	},
+	"componentFramework": "glass-easel",
+	"sitemapLocation": "sitemap.json",
+	"lazyCodeLoading": "requiredComponents",
+	"usingComponents": {
+		"van-button": "@vant/weapp/button/index",
+		"van-icon": "@vant/weapp/icon/index"
+	}
+}
