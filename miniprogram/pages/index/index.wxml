@@ -13,8 +13,8 @@
 			</view>
 		</view>
 		<view class="list">
-			<image src="../../image/recbg1.png" class="image1" />
-			<image src="../../image/recbg2.png" class="image2" />
+			<image src="https://onlineimg.alni.eu.org/raw/daike/my/my_recbg1.png" class="image1" />
+			<image src="https://onlineimg.alni.eu.org/raw/daike/my/my_recbg2.png" class="image2" />
 			<text class="userList">代课订单</text>
 			<view class="allUserListHover" bindtap="loguUserList">
 				<text class="allUserList">全部订单</text>
