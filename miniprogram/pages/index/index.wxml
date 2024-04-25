@@ -1,6 +1,6 @@
 <view class="flex-col page">
 	<view class="groundContainer">
-		<image class="shrink-0 image" src="../../image/22.png" />
+		<image class="shrink-0 image" src="https://onlineimg.alni.eu.org/raw/daike/my/my_background.png" />
 		<view class="userInfo">
 			<image class="userIcon" src="../../image/creative.png" />
 			<text class="userName">
@@ -20,6 +20,25 @@
 				<text class="allUserList">全部订单</text>
 				<van-icon name="arrow" class="arrow" />
 			</view>
+			<view class="orderFilterHover">
+				<view class="orderFilter">
+					<text>我发布的</text>
+					<image src="https://onlineimg.alni.eu.org/raw/daike/my/my_post.png" />
+				</view>
+				<view class="orderFilter">
+					<text>我接单的</text>
+					<image src="https://onlineimg.alni.eu.org/raw/daike/my/my_order.png" />
+				</view>
+				<view class="orderFilter">
+					<text>待完成的</text>
+					<image src="https://onlineimg.alni.eu.org/raw/daike/my/my_uncompleted.png" />
+				</view>
+				<view class="orderFilter">
+					<text>已完成的</text>
+					<image src="https://onlineimg.alni.eu.org/raw/daike/my/my_completed.png" />
+				</view>
+			</view>
+
 		</view>
 	</view>
 </view>
