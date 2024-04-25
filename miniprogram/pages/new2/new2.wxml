@@ -1,7 +1,7 @@
 <view class="flex-col page">
 	<view class="flex-row justify-between section">
 		<text class="self-start text">添加代课订单</text>
-		<image class="self-center image" src="https://ide.code.fun/api/image?token=6622366e9554750011977151&name=a85993fe98d36cc8b7f7516056da5e5c.png" />
+		<image class="self-center image" src="https://onlineimg.alni.eu.org/raw/daike/post/post_background.png" />
 	</view>
 	<form class="biaodanshuxing">
 		<view class="flex-col relative section_2">
