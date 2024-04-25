@@ -31,6 +31,27 @@ Page({
         "sex":"女",
         "detail":""
       },
+      {
+        "time":"8:15-9:50",
+        "classname":"高等数学",
+        "money":"35",
+        "sex":"不限",
+        "detail":""
+      },
+      {
+        "time":"10:05-11:40",
+        "classname":"程序设计",
+        "money":"25",
+        "sex":"男",
+        "detail":""
+      },
+      {
+        "time":"13:00-14:35",
+        "classname":"英语视听说",
+        "money":"45",
+        "sex":"女",
+        "detail":""
+      },
     ],
   },
   handleDateChange(e) {
