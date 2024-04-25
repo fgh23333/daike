@@ -7,7 +7,7 @@
         <view class="flex-row items-center">
           <image
             class="image_7"
-            src="https://ide.code.fun/api/image?token=6620eb1f9554750011971ea4&name=d743183249081c99a29abab834d35663.png"
+            src="https://onlineimg.alni.eu.org/raw/daike/home/home_background.png"
           />
           <text class="text_4 ml-3-5">上海海洋大学</text>
         </view>
