@@ -300,7 +300,7 @@
 .section_12 {
   padding: 11rpx 10rpx 15rpx 16rpx;
   background-color: #fafbff;
-  border-radius: 10rpx;
+  border-radius: 20rpx;
   border-left: dotted 3rpx #e3e3e3;
   border-right: dotted 3rpx #e3e3e3;
   border-top: dotted 3rpx #e3e3e3;
@@ -343,7 +343,7 @@
   padding-left: 28rpx;
   padding-top: 38rpx;
   overflow: hidden;
-  border-radius: 30rpx;
+  border-radius: 20rpx;
   background-color: #ffffff;
   box-shadow: 0rpx 5rpx 10rpx #3276ec1a;
   height: 210rpx;
