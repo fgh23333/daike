@@ -3,8 +3,7 @@
 		"pages/home/home",
 		"pages/me/me",
 		"pages/new2/new2",
-		"pages/index/index",
-		"pages/new/new"
+		"pages/index/index"
 	],
 	"window": {
 		"navigationBarTextStyle": "black",
