@@ -26,7 +26,8 @@
   margin-left: 3rpx;
 }
 .mt-12-5 {
-  margin-top: 25rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
 }
 .ml-7 {
   margin-left: 14rpx;
@@ -122,22 +123,23 @@
 }
 .group {
   overflow-x: hidden;
-  height: 1415.38rpx;
 }
 .section_6 {
   padding: 32rpx 22rpx 318rpx;
   background-size: 890rpx 600rpx;
   background-repeat: no-repeat;
-  background-image: url('https://ide.code.fun/api/image?token=6620eb1f9554750011971ea4&name=c7715633f65317250097a7ede420eda0.png');
-  background-position: -21rpx -21.62rpx;
+  background-image: url('https://onlineimg.alni.eu.org/raw/homepage/topbg.png');
+  background-position: -25rpx -25.62rpx;
   width: 770rpx;
 }
 .group_3 {
   width: 256.9rpx;
 }
 .image_7 {
-  width: 33rpx;
-  height: 33rpx;
+  width: 35rpx;
+  height: 35rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
 }
 .text_4 {
   color: #ffffff;
@@ -163,7 +165,7 @@
   line-height: 44.22rpx;
 }
 .group_2 {
-  padding: 3rpx 10rpx 7rpx;
+
   width: 130rpx;
 }
 .section_7 {
@@ -175,13 +177,19 @@
 .section_8 {
   background-color: #ffffffe6;
   border-radius: 0rpx 0rpx 10rpx 10rpx;
-  box-shadow: 0rpx 2rpx 4rpx #0000001a;
+  box-shadow: 0rpx 0rpx 10rpx #0000001a;
   width: 95rpx;
   height: 77.38rpx;
 }
 .image_6 {
-  width: 105rpx;
-  height: 105rpx;
+  width: 95rpx;
+  height: 95rpx;
+  border-radius: 10rpx 10rpx 10rpx 10rpx;
+}
+.image_15 {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
 }
 .pos_4 {
   position: absolute;
@@ -217,8 +225,8 @@
   border-radius: 25rpx;
 }
 .image_10 {
-  width: 22rpx;
-  height: 22rpx;
+  width: 26rpx;
+  height: 26rpx;
 }
 .font_3 {
   font-size: 24rpx;
@@ -286,7 +294,8 @@
 }
 .group_7 {
   margin-top: 23rpx;
-  padding-left: 39rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
 }
 .section_12 {
   padding: 11rpx 10rpx 15rpx 16rpx;
@@ -308,10 +317,10 @@
   line-height: 29.38rpx;
 }
 .font_4 {
-  font-size: 24rpx;
+  font-size: 26rpx;
   font-family: AlibabaPuHuiTi;
   line-height: 21.92rpx;
-  color: #717f92;
+  color: #5f6b7c;
 }
 .text_15 {
   line-height: 21.94rpx;
@@ -349,8 +358,8 @@
   font-family: 阿里巴巴普惠体;
   font-weight: 800;
   line-height: 48rpx;
-  letter-spacing: -1rpx;
-  width: 250rpx;
+  letter-spacing: 3rpx;
+  width: 350rpx;
 }
 .group_8 {
   margin-bottom: -24rpx;
@@ -360,7 +369,7 @@
 }
 .text_20 {
   color: #ff3b53;
-  font-size: 28rpx;
+  font-size: 34rpx;
   font-family: 阿里巴巴普惠体;
   line-height: 34rpx;
   width: 100rpx;
@@ -395,13 +404,13 @@
 }
 .text_21 {
   color: #717f92;
-  font-size: 18rpx;
+  font-size: 20rpx;
   font-family: AlibabaPuHuiTi;
-  line-height: 16.7rpx;
+  
 }
 .pos_10 {
   position: absolute;
-  left: 0;
+  left: -40rpx;
   bottom: 47.1rpx;
 }
 .section_13 {

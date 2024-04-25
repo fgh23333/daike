@@ -1,88 +1,61 @@
 <view class="flex-col relative page">
-  
+
   <view class="flex-col group">
-  <!-- test111 -->
+    <!-- test111 -->
     <view class="flex-row justify-between self-start section_6">
       <view class="flex-col self-center group_3">
         <view class="flex-row items-center">
-          <image
-            class="image_7"
-            src="https://ide.code.fun/api/image?token=6620eb1f9554750011971ea4&name=d743183249081c99a29abab834d35663.png"
-          />
-          <text class="text_4 ml-3-5">上海海洋大学</text>
+          <image class="image_7" src="https://onlineimg.alni.eu.org/raw/homepage/location.png" />
+          <text class="text_4 ml-3-5">{{location}}</text>
         </view>
         <view class="group_4 mt-19-5">
           <text class="text_6">欢迎回来，</text>
-          <text class="text_5">靳取</text>
+          <text class="text_5">{{username}}</text>
           <!-- 用户名 -->
         </view>
       </view>
       <view class="flex-col items-start self-start relative group_2">
         <view class="section_7"></view>
         <view class="relative section_8"></view>
-        <image
-          class="image_6 pos_4"
-          src="https://ide.code.fun/api/image?token=6620eb1f9554750011971ea4&name=7c1c47d562248a5607579400a9561a61.png"
-        />
-        <!-- 这是头像 -->
+        <image class="image_6 pos_4" src="{{userimg}}" />
+
       </view>
     </view>
     <view class="flex-col self-stretch relative section_9">
       <view class="flex-col">
-        <text class="self-start text_7">当前报价</text>
-        <image
-          class="self-start image_8"
-          src="https://ide.code.fun/api/image?token=6620eb1f9554750011971ea4&name=ce8e96bdd67281fc13d8386cdfd8c07d.png"
-        />
+        <text class="self-start text_7">当前订单</text>
+        <image class="self-start image_8" src="https://onlineimg.alni.eu.org/raw/homepage/homebaojia.png" />
         <view class="flex-col self-stretch group_5">
-          <view class="flex-row justify-center items-center relative section_10">
+          <picker class="flex-row justify-center items-center relative section_10" mode="date" bindchange="handleDateChange" value="{{choosedate}}">
             <view class="flex-row items-center">
-              <image
-                class="shrink-0 image_10"
-                src="https://ide.code.fun/api/image?token=6620eb1f9554750011971ea4&name=9715399da43f226219349e6c1577ca99.png"
-              />
-              <text class="font_3 text_9 ml-5">2024-04-18</text>
+              <image class="shrink-0 image_10" src="https://onlineimg.alni.eu.org/raw/homepage/homedata.png" />
+              <text class="font_3 text_9 ml-5">{{choosedate}}</text>
             </view>
             <view class="flex-row items-center pos_5">
-              <text class="font_2 text_8">后一天</text>
-              <image
-                class="shrink-0 image_9 ml-7"
-                src="https://ide.code.fun/api/image?token=6620eb1f9554750011971ea4&name=f56e4e6f3ff95ee232d23dfc6b8bbfd0.png"
-              />
+              <text class="font_2 text_8">选择日期</text>
+              <image class="shrink-0 image_9 ml-7" src="https://onlineimg.alni.eu.org/raw/homepage/jiantou.png" />
             </view>
-          </view>
-          <view class="flex-row justify-center items-center relative section_10 mt-9">
+          </picker>
+          <picker class="flex-row justify-center items-center relative section_10 mt-9" bindchange="handleSelectorChange" mode="selector" range="{{timeslots}}">
             <view class="flex-row">
-              <image
-                class="shrink-0 image_10"
-                src="https://ide.code.fun/api/image?token=6620eb1f9554750011971ea4&name=9715399da43f226219349e6c1577ca99.png"
-              />
-              <text class="font_3 text_10 ml-7">全时段</text>
+              <image class="shrink-0 image_10" src="https://onlineimg.alni.eu.org/raw/homepage/hometime.png" />
+              <text class="font_3 text_10 ml-7">{{selecttime}}</text>
             </view>
             <view class="flex-row items-center pos_6">
               <text class="font_2 text_11">筛选时段</text>
-              <image
-                class="shrink-0 image_9"
-                src="https://ide.code.fun/api/image?token=6620eb1f9554750011971ea4&name=f56e4e6f3ff95ee232d23dfc6b8bbfd0.png"
-              />
+              <image class="shrink-0 image_9 ml-7" src="https://onlineimg.alni.eu.org/raw/homepage/jiantou.png" />
             </view>
-          </view>
-          <view class="flex-row justify-center items-center relative section_10 mt-9">
+          </picker>
+          <picker class="flex-row justify-center items-center relative section_10 mt-9" bindchange="sexChange" mode="selector" range="{{sexlist}}">
             <view class="flex-row">
-              <image
-                class="shrink-0 image_10"
-                src="https://ide.code.fun/api/image?token=6620eb1f9554750011971ea4&name=3c565eecb1d9c51a69fd8e20108e0bf0.png"
-              />
-              <text class="font_3 ml-7">性别不限</text>
+              <image class="shrink-0 image_10" src="https://onlineimg.alni.eu.org/raw/homepage/homesex.png" />
+              <text class="font_3 ml-7">{{selectsex}}</text>
             </view>
             <view class="flex-row items-center pos_7">
               <text class="font_2 text_12">筛选性别</text>
-              <image
-                class="shrink-0 image_9"
-                src="https://ide.code.fun/api/image?token=6620eb1f9554750011971ea4&name=f56e4e6f3ff95ee232d23dfc6b8bbfd0.png"
-              />
+              <image class="shrink-0 image_9 image_9 ml-7" src="https://onlineimg.alni.eu.org/raw/homepage/jiantou.png" />
             </view>
-          </view>
+          </picker>
         </view>
         <view class="flex-row items-center self-start group_6">
           <view class="shrink-0 section_11"></view>
@@ -91,54 +64,45 @@
         <view class="flex-row self-stretch group_7">
           <view class="flex-col flex-1">
             <view class="flex-row items-center self-stretch section_12">
-              <image
-                class="image_11"
-                src="https://ide.code.fun/api/image?token=6620eb1f9554750011971ea4&name=f3729e92a504de0fbeac06b1270b834c.png"
-              />
+              <image class="image_11" src="https://onlineimg.alni.eu.org/raw/homepage/homeAdd.png" />
               <view class="flex-col items-start flex-1 ml-5-5">
-                <text class="text_14">发布报价</text>
+                <text class="text_14">发布订单</text>
                 <text class="font_4 text_15 mt-15-5">添加一个代课报价</text>
               </view>
             </view>
-            <view class="self-end section_14"></view>
-            <view class="flex-col self-stretch section_15">
-              <text class="self-start text_16">8 : 15-9 : 50</text>
-              <view class="mt-4 flex-row self-stretch group_8">
-                <view class="flex-col flex-1 self-start">
-                  <view class="flex-row justify-end self-stretch">
-                    <text class="font_4">性别:</text>
-                    <text class="font_4 text_19 ml-1-5">不限</text>
+            <view wx:for="{{formList}}">
+              <view class="flex-col self-stretch section_15">
+                <text class="self-start text_16">{{item.time}}</text>
+                <view class="mt-4 flex-row self-stretch group_8">
+                  <view class="flex-col flex-1 self-start">
+                    <view class="flex-row justify-end self-stretch">
+                      <text class="font_4">性别:</text>
+                      <text class="font_4 text_19 ml-1-5">{{item.sex}}</text>
+                    </view>
+                    <view style="display: flex;align-items: center;">
+                      <image class="shrink-0 image_15" src="https://onlineimg.alni.eu.org/raw/homepage/homeprice.png" />
+                      <text class="self-start text_20 mt-12-5">{{item.money}}</text>
+                    </view>
                   </view>
-                  <text class="self-start text_20 mt-12-5">¥ 35</text>
-                </view>
-                <view class="ml-20 flex-col justify-start items-start relative group_9">
-                  <text class="font_4 text_17">课程:</text>
-                  <view class="flex-col justify-start items-end group_10 pos_8">
-                    <image
-                      class="image_12"
-                      src="https://ide.code.fun/api/image?token=6620eb1f9554750011971ea4&name=df000522e48656ffc802e9121e430bc2.png"
-                    />
-                    <text class="font_4 text_18 pos_9">高等数学</text>
-                    <text class="text_21 pos_10">更多信息点击查看</text>
+                  <view class="ml-20 flex-col justify-start items-start relative group_9">
+                    <text class="font_4 text_17">课程:</text>
+                    <view class="flex-col justify-start items-end group_10 pos_8">
+                      <image class="image_12" src="https://onlineimg.alni.eu.org/raw/homepage/homemoney.png" />
+                      <text class="font_4 text_18 pos_9">{{item.classname}}</text>
+                      <text class="text_21 pos_10">更多信息点击查看</text>
+                    </view>
                   </view>
                 </view>
               </view>
             </view>
           </view>
-          <view class="shrink-0 self-start section_13 ml-7"></view>
+          
         </view>
       </view>
       <view class="flex-row justify-end mt-83">
-        <image
-          class="image_13"
-          src="https://ide.code.fun/api/image?token=6620eb1f9554750011971ea4&name=b1910ff5fae5ddf2b9b3fd21dd54d288.png"
-        />
-        <image
-          class="image_13 image_14 ml-5"
-          src="https://ide.code.fun/api/image?token=6620eb1f9554750011971ea4&name=b1910ff5fae5ddf2b9b3fd21dd54d288.png"
-        />
+
       </view>
     </view>
-    
+
   </view>
 </view>
