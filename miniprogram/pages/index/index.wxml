@@ -22,20 +22,21 @@
 			</view>
 			<view class="orderFilterHover">
 				<view class="orderFilter">
-					<text>我发布的</text>
-					<image src="https://onlineimg.alni.eu.org/raw/daike/my/my_post.png" />
+					<image class="orderIcon" src="https://onlineimg.alni.eu.org/raw/daike/my/my_post.png" />
+					<text class="orderText">我发布的</text>
 				</view>
 				<view class="orderFilter">
-					<text>我接单的</text>
-					<image src="https://onlineimg.alni.eu.org/raw/daike/my/my_order.png" />
+					<image class="orderIcon" src="https://onlineimg.alni.eu.org/raw/daike/my/my_order.png" />
+					<text class="orderText">我接单的</text>
 				</view>
 				<view class="orderFilter">
-					<text>待完成的</text>
-					<image src="https://onlineimg.alni.eu.org/raw/daike/my/my_uncompleted.png" />
+					<image class="orderIcon" src="https://onlineimg.alni.eu.org/raw/daike/my/my_uncompleted.png" />
+					<text class="orderText">待完成的</text>
 				</view>
 				<view class="orderFilter">
-					<text>已完成的</text>
-					<image src="https://onlineimg.alni.eu.org/raw/daike/my/my_completed.png" />
+
+					<image class="orderIcon" src="https://onlineimg.alni.eu.org/raw/daike/my/my_completed.png" />
+					<text class="orderText">已完成的</text>
 				</view>
 			</view>
 

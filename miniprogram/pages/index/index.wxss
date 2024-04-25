@@ -112,3 +112,28 @@
   height: 18rpx;
   font-size: 24rpx;
 }
+.page .groundContainer .list .orderFilterHover {
+  width: 90vw;
+  height: 60rpx;
+  position: absolute;
+  top: 100rpx;
+  z-index: 20;
+}
+.page .groundContainer .list .orderFilterHover .orderFilter {
+  width: 25%;
+  float: left;
+  height: 100rpx;
+}
+.page .groundContainer .list .orderFilterHover .orderFilter .orderIcon {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 0 auto;
+  display: block;
+}
+.page .groundContainer .list .orderFilterHover .orderFilter .orderText {
+  display: block;
+  text-align: center;
+  height: 40rpx;
+  font-size: 24rpx;
+  line-height: 40rpx;
+}
