@@ -1,0 +1,25 @@
+.fullCell {
+  width: 100vw;
+  height: 100rpx;
+  background-color: white;
+  font-size: 30rpx;
+}
+.fullCell .icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 30rpx 20rpx;
+  margin-left: 30rpx;
+  float: left;
+}
+.fullCell .text {
+  float: left;
+  padding: 30rpx 0rpx;
+  font-weight: 350;
+}
+.fullCell .arrow {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 30rpx 20rpx;
+  float: right;
+  color: #cccccc;
+}

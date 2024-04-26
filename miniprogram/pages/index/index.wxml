@@ -45,5 +45,6 @@
 			<text class="aboutUs">关于我们</text>
 			<van-icon name="arrow" class="arrow"/>
 		</view>
+		<cell_grid></cell_grid>
 	</view>
 </view>

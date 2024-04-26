@@ -164,3 +164,6 @@
   float: right;
   color: #cccccc;
 }
+.page .groundContainer cell_grid {
+  border: 1px solid black;
+}
