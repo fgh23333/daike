@@ -155,6 +155,7 @@
 .page .groundContainer .aboutUsHover .aboutUs {
   float: left;
   padding: 30rpx 0rpx;
+  font-weight: 350;
 }
 .page .groundContainer .aboutUsHover .arrow {
   width: 40rpx;
