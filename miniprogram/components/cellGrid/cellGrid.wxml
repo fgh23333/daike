@@ -1,0 +1,5 @@
+<view class="fullCell aboutUsHover">
+	<image src="https://onlineimg.alni.eu.org/raw/daike/my/my_about_us.png" class="aboutUsIcon" />
+	<text class="aboutUs">关于我们</text>
+	<van-icon name="arrow" class="arrow" />
+</view>
