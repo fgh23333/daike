@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-	  "cell_grid": "/components/cell_grid/cell_grid"
+	  "full-cell": "/components/full-cell/full-cell"
   }
 }

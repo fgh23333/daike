@@ -9,7 +9,7 @@
 			</text>
 			<text class="personal">个人</text>
 			<view class="userButton" bindtap="goto">账户信息
-				
+				<van-icon name="arrow" class="arrow" />
 			</view>
 		</view>
 		<view class="list">
@@ -34,17 +34,15 @@
 					<text class="orderText">待完成的</text>
 				</view>
 				<view class="orderFilter">
-
 					<image class="orderIcon" src="https://onlineimg.alni.eu.org/raw/daike/my/my_completed.png" />
 					<text class="orderText">已完成的</text>
 				</view>
 			</view>
 		</view>
-		<view class="fullCell aboutUsHover">
-			<image src="https://onlineimg.alni.eu.org/raw/daike/my/my_about_us.png" class="aboutUsIcon"/>
-			<text class="aboutUs">关于我们</text>
-			<van-icon name="arrow" class="arrow"/>
+		<view class="cellGroup">
+			<full-cell class="cell">关于我们</full-cell>
+			<full-cell class="cell">退出登录</full-cell>
 		</view>
-		<cell_grid></cell_grid>
+
 	</view>
 </view>
