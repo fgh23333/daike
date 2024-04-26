@@ -63,7 +63,7 @@
           <picker class="flex-row items-center relative group_11" bindchange="sortChange" mode="selector" range="{{sortList}}">
 
             <text class="text_25">排序：{{selectSortType}}</text>
-            <image class="shrink-0 image_9 image_9 ml-7" src="https://onlineimg.alni.eu.org/raw/homepage/jiantou.png" />
+            <image class="shrink-0 image_9 ml-7" src="https://onlineimg.alni.eu.org/raw/homepage/jiantou.png" />
 
           </picker>
         </view>

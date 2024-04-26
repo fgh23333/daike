@@ -462,11 +462,14 @@
   border-radius: 25rpx;
   margin-right: 10rpx;
   position: absolute;
+  display: flex;
   right: 20rpx;
-
+  height: 26rpx;
+  align-items: center;
 }
 .text_25{
   font-size: 24rpx;
+  line-height: 32rpx;
   font-family: 阿里巴巴普惠体;
   color: #339af0;
 }
