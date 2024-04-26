@@ -9,6 +9,8 @@ Page({
     timeslots:['全时段','8:15~9:50','10:05~11:40','13:00~14:35','14:45~16:20','18:00~19:35','18:00~20:30'],
     sexlist:['男', '女', '性别不限'],
     selectsex:"性别不限",
+    selectSortType:"时间顺序",
+    sortList:["时间顺序","时间倒序","价格降序","价格升序"],
     formList:[
       {
         "time":"8:15-9:50",
@@ -75,6 +77,13 @@ Page({
     const selectedGender = this.data.sexlist[index];
     this.setData({
       selectsex: selectedGender
+    });
+  },
+  sortChange: function(e) {
+    const index = e.detail.value;
+    const selectedGender = this.data.sortList[index];
+    this.setData({
+      selectSortType: selectedGender
     });
   },
   onLoad: function() {

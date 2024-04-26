@@ -455,3 +455,18 @@
 .text_24 {
   line-height: 18.3rpx;
 }
+.group_11{
+
+  padding: 16rpx 20rpx 12rpx;
+  background-color: #c9e6fa66;
+  border-radius: 25rpx;
+  margin-right: 10rpx;
+  position: absolute;
+  right: 20rpx;
+
+}
+.text_25{
+  font-size: 24rpx;
+  font-family: 阿里巴巴普惠体;
+  color: #339af0;
+}
