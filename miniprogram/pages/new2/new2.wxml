@@ -45,10 +45,10 @@
 				<view class="flex-col group">
 					<picker-view mode="selector" range="{{TimeArray}}" class=" group_2" bindchange="Timechange">
 						<picker-view-column>
-							<view wx:for="{{months}}" wx:key="{{index}}">{{item}}</view>
+							<view wx:for="{{months}}" wx:key="index">{{item}}</view>
 						</picker-view-column>
 						<picker-view-column>
-							<view wx:for="{{days}}" wx:key="{{index}}">{{item}}</view>
+							<view wx:for="{{days}}" wx:key="index">{{item}}</view>
 						</picker-view-column>
 						<picker-view-column>
 							<view wx:for="{{timeslots}}" wx:key="index">{{item}}</view>
