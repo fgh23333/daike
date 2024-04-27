@@ -376,8 +376,8 @@
   font-weight: 600;
 }
 .group_9 {
-  margin-top: -26rpx;
-  margin-right: -21rpx;
+  margin-top: -35rpx;
+  margin-right: -1rpx;
   padding-bottom: 14rpx;
 
 }
@@ -515,6 +515,7 @@
   letter-spacing: 1rpx;
   position: absolute;
   right: 100rpx;
+  z-index: 1;
 }
 .text_26{
   font-size: 30rpx;

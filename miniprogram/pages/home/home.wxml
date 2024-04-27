@@ -96,7 +96,7 @@
                   <view class="ml-20 flex-col justify-start items-start relative group_9">
 <!--                    <text class="font_4 text_17">课程:</text>-->
                     <view class="flex-col justify-start items-end group_10 pos_8">
-                      <image class="image_12" src="https://onlineimg.alni.eu.org/raw/homepage/homemoney.png" />
+                      <image class="image_12" src="https://onlineimg.alni.eu.org/raw/homepage/homewave.png" />
 <!--                      <text class="font_4 text_18 pos_9">{{item.classname}}</text>-->
 <!--                      <text class="text_21 pos_10">更多信息点击查看</text>-->
                     </view>
