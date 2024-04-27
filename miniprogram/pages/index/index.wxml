@@ -40,8 +40,8 @@
 			</view>
 		</view>
 		<view class="cellGroup">
-			<full-cell class="cell">关于我们</full-cell>
-			<full-cell class="cell">退出登录</full-cell>
+			<full-cell class="cell" src="https://onlineimg.alni.eu.org/raw/daike/my/my_about_us.png" content="关于我们"></full-cell>
+			<full-cell class="cell" src="https://onlineimg.alni.eu.org/raw/daike/my/my_change_account.png" content="退出登录"></full-cell>
 		</view>
 	</view>
 </view>
