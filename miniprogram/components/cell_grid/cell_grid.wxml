@@ -1,7 +1,0 @@
-<view class="fullCell">
-	<!-- <image src="{{ src }}" class="icon" /> -->
-	<text class="text">
-		<slot></slot>
-	</text>
-	<van-icon name="arrow" class="arrow" />
-</view>
