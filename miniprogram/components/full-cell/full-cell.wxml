@@ -1,7 +1,7 @@
 <view class="fullCell">
 	<image src="{{ src }}" class="icon" />
-	<text class="text">
-		<slot></slot>
-	</text>
+	<view class="text">
+		{{ content }}
+	</view>
 	<van-icon name="arrow" class="arrow" />
 </view>

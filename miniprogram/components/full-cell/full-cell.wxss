@@ -3,7 +3,7 @@
   height: 100rpx;
   background-color: white;
   font-size: 30rpx;
-  margin: 3rpx 0rpx;
+  margin: 4rpx 0rpx;
 }
 .fullCell .icon {
   width: 40rpx;
@@ -14,8 +14,8 @@
 }
 .fullCell .text {
   float: left;
-  padding: 30rpx 0rpx;
-  font-weight: 350;
+  height: 100rpx;
+  line-height: 100rpx;
 }
 .fullCell .arrow {
   width: 40rpx;
