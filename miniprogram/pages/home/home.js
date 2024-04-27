@@ -13,6 +13,7 @@ Page({
     sortList:["时间顺序","时间倒序","价格降序","价格升序"],
     formList:[
       {
+        "id": "111",
         "time":"8:15-9:50",
         "classname":"高等数学",
         "money":"35",
@@ -20,6 +21,7 @@ Page({
         "detail":""
       },
       {
+        "id": "222",
         "time":"10:05-11:40",
         "classname":"程序设计",
         "money":"25",
@@ -27,6 +29,7 @@ Page({
         "detail":""
       },
       {
+        "id": "333",
         "time":"13:00-14:35",
         "classname":"英语视听说",
         "money":"45",
@@ -34,6 +37,7 @@ Page({
         "detail":""
       },
       {
+        "id": "444",
         "time":"8:15-9:50",
         "classname":"高等数学",
         "money":"35",
@@ -41,6 +45,7 @@ Page({
         "detail":""
       },
       {
+        "id": "555",
         "time":"10:05-11:40",
         "classname":"程序设计",
         "money":"25",
@@ -48,6 +53,7 @@ Page({
         "detail":""
       },
       {
+        "id": "666",
         "time":"13:00-14:35",
         "classname":"英语视听说",
         "money":"45",
@@ -61,7 +67,20 @@ Page({
       choosedate: e.detail.value
     });
   },
-
+  handleItemClick: function(e) {
+    // 通过 e.currentTarget.dataset.item 获取到传递的参数
+    let clickedItem = e.currentTarget.dataset.item;
+    console.log('点击的 item 是：', clickedItem);
+    wx.navigateTo({
+      url: `/pages/detail/detail?itemId=${encodeURIComponent(clickedItem.id)}`, // 通过URL传递参数
+    });
+  },
+  goToPublish: function() {
+    console.log('goToPublish');
+    wx.switchTab({
+      url: '/pages/new2/new2'
+    });
+  },
   onShareAppMessage() {
     return {};
   },

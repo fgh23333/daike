@@ -33,7 +33,7 @@
             </view>
             <view class="flex-row items-center pos_5">
               <text class="font_2 text_8">选择日期</text>
-              <image class="shrink-0 image_9 ml-7" src="https://onlineimg.alni.eu.org/raw/homepage/jiantou.png" />
+              <image class="shrink-0 image_9 ml-7" src="https://onlineimg.alni.eu.org/raw/homepage/homeright.png" />
             </view>
           </picker>
           <picker class="flex-row justify-center items-center relative section_10 mt-9" bindchange="handleSelectorChange" mode="selector" range="{{timeslots}}">
@@ -43,7 +43,7 @@
             </view>
             <view class="flex-row items-center pos_6">
               <text class="font_2 text_11">筛选时段</text>
-              <image class="shrink-0 image_9 ml-7" src="https://onlineimg.alni.eu.org/raw/homepage/jiantou.png" />
+              <image class="shrink-0 image_9 ml-7" src="https://onlineimg.alni.eu.org/raw/homepage/homeright.png" />
             </view>
           </picker>
           <picker class="flex-row justify-center items-center relative section_10 mt-9" bindchange="sexChange" mode="selector" range="{{sexlist}}">
@@ -53,31 +53,29 @@
             </view>
             <view class="flex-row items-center pos_7">
               <text class="font_2 text_12">筛选性别</text>
-              <image class="shrink-0 image_9 image_9 ml-7" src="https://onlineimg.alni.eu.org/raw/homepage/jiantou.png" />
+              <image class="shrink-0 image_9 image_9 ml-7" src="https://onlineimg.alni.eu.org/raw/homepage/homeright.png" />
             </view>
           </picker>
         </view>
         <view class="flex-row items-center self-start group_6">
           <view class="shrink-0 section_11"></view>
           <text class="ml-10 text_13">代课报价</text>
-          <picker class="flex-row items-center relative group_11" bindchange="sortChange" mode="selector" range="{{sortList}}">
-
-            <text class="text_25">排序：{{selectSortType}}</text>
-            <image class="shrink-0 image_9 ml-7" src="https://onlineimg.alni.eu.org/raw/homepage/jiantou.png" />
-
-          </picker>
+<!--          <picker class="flex-row items-center relative group_11" bindchange="sortChange" mode="selector" range="{{sortList}}">-->
+<!--            <view class="text_25">排序：{{selectSortType}}</view>-->
+<!--            <image class="shrink-0 image_9 ml-7" src="https://onlineimg.alni.eu.org/raw/homepage/homesort.png" />-->
+<!--          </picker>-->
         </view>
         <view class="flex-row self-stretch group_7">
           <view class="flex-col flex-1">
-            <view class="flex-row items-center self-stretch section_12">
+            <view class="flex-row items-center self-stretch section_12" bindtap="goToPublish">
               <image class="image_11" src="https://onlineimg.alni.eu.org/raw/homepage/homeAdd.png" />
               <view class="flex-col items-start flex-1 ml-5-5">
                 <text class="text_14">发布订单</text>
                 <text class="font_4 text_15 mt-15-5">添加一个代课报价</text>
               </view>
             </view>
-            <view wx:for="{{formList}}">
-              <view class="flex-col self-stretch section_15">
+            <view wx:for="{{formList}}" wx:key="index" data-item="{{item}}" bindtap="handleItemClick">
+              <view class="flex-col self-stretch section_15 fade-animation">
                 <text class="self-start text_16">{{item.time}}</text>
                 <view class="mt-4 flex-row self-stretch group_8">
                   <view class="flex-col flex-1 self-start">
