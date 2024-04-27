@@ -18,7 +18,8 @@ Page({
         "classname":"高等数学",
         "money":"35",
         "sex":"不限",
-        "detail":""
+        "detail":"",
+        "classroom":"1102"
       },
       {
         "id": "222",
@@ -26,7 +27,8 @@ Page({
         "classname":"程序设计",
         "money":"25",
         "sex":"男",
-        "detail":""
+        "detail":"",
+        "classroom":"1103"
       },
       {
         "id": "333",
@@ -34,7 +36,8 @@ Page({
         "classname":"英语视听说",
         "money":"45",
         "sex":"女",
-        "detail":""
+        "detail":"",
+        "classroom":"1109"
       },
       {
         "id": "444",
@@ -42,7 +45,8 @@ Page({
         "classname":"高等数学",
         "money":"35",
         "sex":"不限",
-        "detail":""
+        "detail":"",
+        "classroom":"1102"
       },
       {
         "id": "555",
@@ -50,7 +54,8 @@ Page({
         "classname":"程序设计",
         "money":"25",
         "sex":"男",
-        "detail":""
+        "detail":"",
+        "classroom":"1101"
       },
       {
         "id": "666",
@@ -58,7 +63,8 @@ Page({
         "classname":"英语视听说",
         "money":"45",
         "sex":"女",
-        "detail":""
+        "detail":"",
+        "classroom":"1103"
       },
     ],
   },

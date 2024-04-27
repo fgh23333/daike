@@ -76,28 +76,36 @@
             </view>
             <view wx:for="{{formList}}" wx:key="index" data-item="{{item}}" bindtap="handleItemClick">
               <view class="flex-col self-stretch section_15 fade-animation">
+                <view class="flex-row">
                 <text class="self-start text_16">{{item.time}}</text>
+                <view class="section_17">{{item.classname}}</view>
+                </view>
                 <view class="mt-4 flex-row self-stretch group_8">
-                  <view class="flex-col flex-1 self-start">
-                    <view class="flex-row justify-end self-stretch">
-                      <text class="font_4">性别:</text>
-                      <text class="font_4 text_19 ml-1-5">{{item.sex}}</text>
-                    </view>
+                  <view class="flex-row relative flex-1 self-start group_12">
+
                     <view style="display: flex;align-items: center;">
                       <image class="shrink-0 image_15" src="https://onlineimg.alni.eu.org/raw/homepage/homeprice.png" />
                       <text class="self-start text_20 mt-12-5">{{item.money}}</text>
                     </view>
+                    <view class="flex-row items-center justify-end self-stretch">
+                    <text class="font_4 text_26">性别: {{item.sex}}</text>
+                      <text class="font_4 text_26">教室: {{item.classroom}}</text>
+                  </view>
+
                   </view>
                   <view class="ml-20 flex-col justify-start items-start relative group_9">
-                    <text class="font_4 text_17">课程:</text>
+<!--                    <text class="font_4 text_17">课程:</text>-->
                     <view class="flex-col justify-start items-end group_10 pos_8">
                       <image class="image_12" src="https://onlineimg.alni.eu.org/raw/homepage/homemoney.png" />
-                      <text class="font_4 text_18 pos_9">{{item.classname}}</text>
-                      <text class="text_21 pos_10">更多信息点击查看</text>
+<!--                      <text class="font_4 text_18 pos_9">{{item.classname}}</text>-->
+<!--                      <text class="text_21 pos_10">更多信息点击查看</text>-->
                     </view>
                   </view>
                 </view>
               </view>
+            </view>
+            <view class="flex-row justify-center group_13">
+              <text class="font_4 text_15 mt-15-5">--- 没有更多内容啦 ---</text>
             </view>
           </view>
           

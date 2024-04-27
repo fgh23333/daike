@@ -33,7 +33,7 @@
   margin-left: 14rpx;
 }
 .mt-83 {
-  margin-top: 166rpx;
+  margin-top: 20rpx;
 }
 .ml-5 {
   margin-left: 10rpx;
@@ -346,7 +346,7 @@
   border-radius: 20rpx;
   background-color: #ffffff;
   box-shadow: 0rpx 5rpx 10rpx #3276ec1a;
-  height: 210rpx;
+  height: 180rpx;
   border-left: solid 2rpx #ecf3fd;
   border-right: solid 2rpx #ecf3fd;
   border-top: solid 2rpx #ecf3fd;
@@ -369,15 +369,17 @@
 }
 .text_20 {
   color: #ff3b53;
-  font-size: 34rpx;
+  font-size: 36rpx;
   font-family: 阿里巴巴普惠体;
   line-height: 34rpx;
   width: 100rpx;
+  font-weight: 600;
 }
 .group_9 {
+  margin-top: -26rpx;
   margin-right: -21rpx;
-  padding-bottom: 114rpx;
-  width: 265.98rpx;
+  padding-bottom: 14rpx;
+
 }
 .text_17 {
   line-height: 21.26rpx;
@@ -504,4 +506,24 @@
   animation-duration: 0.5s; /* 动画持续时间 */
   animation-timing-function: ease-in-out; /* 动画速度曲线 */
   animation-iteration-count: 1; /* 动画播放次数，这里设置为1次 */
+}
+.section_17{
+  color: #274986;
+  font-size: 36rpx;
+  font-weight: 700;
+  line-height: 48rpx;
+  letter-spacing: 1rpx;
+  position: absolute;
+  right: 100rpx;
+}
+.text_26{
+  font-size: 30rpx;
+  width: 220rpx;
+
+}
+.group_12{
+  margin-top: 15rpx;
+}
+.group_13{
+  margin-top: 20rpx;
 }
