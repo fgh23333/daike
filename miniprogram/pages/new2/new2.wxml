@@ -51,7 +51,7 @@
 							<view wx:for="{{days}}" wx:key="{{index}}">{{item}}</view>
 						</picker-view-column>
 						<picker-view-column>
-							<view wx:for="{{timeslots}}" wx:key="{{index}}">{{item}}</view>
+							<view wx:for="{{timeslots}}" wx:key="index">{{item}}</view>
 						</picker-view-column>
 						<view class="flex-row justify-between group_1">
 							<text class="font_1 text_2">时间段</text>
