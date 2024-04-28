@@ -26,16 +26,21 @@
         <text class="self-start text_7">当前订单</text>
         <image class="self-start image_8" src="https://onlineimg.alni.eu.org/raw/homepage/homebaojia.png" />
         <view class="flex-col self-stretch group_5">
-          <picker class="flex-row justify-center items-center relative section_10" mode="date" bindchange="handleDateChange" value="{{choosedate}}">
+          <view class="flex-row justify-center items-center relative section_10" mode="date" bindchange="handleDateChange" value="{{choosedate}}">
+            <view class="flex-row items-center pos_11" bindtap="upDay" wx:if="{{ifshowdate.left}}">
+            <image class="shrink-0 image_9 ml-7" src="https://onlineimg.alni.eu.org/raw/homepage/homeleft.png" />
+              <text class="font_2 text_8">前一天</text>
+              
+            </view>
             <view class="flex-row items-center">
               <image class="shrink-0 image_10" src="https://onlineimg.alni.eu.org/raw/homepage/homedata.png" />
-              <text class="font_3 text_9 ml-5">{{choosedate}}</text>
+              <text class="font_3 text_9 ml-5">{{thedate.year}}-{{thedate.month}}-{{thedate.day}}</text>
             </view>
-            <view class="flex-row items-center pos_5">
-              <text class="font_2 text_8">选择日期</text>
+            <view class="flex-row items-center pos_5" bindtap="nextDay" wx:if="{{ifshowdate.right}}">
+              <text class="font_2 text_8">后一天</text>
               <image class="shrink-0 image_9 ml-7" src="https://onlineimg.alni.eu.org/raw/homepage/homeright.png" />
             </view>
-          </picker>
+          </view>
           <picker class="flex-row justify-center items-center relative section_10 mt-9" bindchange="handleSelectorChange" mode="selector" range="{{timeslots}}">
             <view class="flex-row">
               <image class="shrink-0 image_10" src="https://onlineimg.alni.eu.org/raw/homepage/hometime.png" />

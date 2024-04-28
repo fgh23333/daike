@@ -2,7 +2,16 @@ Page({
   data: {
     username:"靳取",
     userid:100,
-    choosedate:"",
+    thedate:{
+      year:0,
+      month:0,
+      day:0
+    },
+    ifshowdate:{
+      "left": false,
+      "right": true
+    },
+    choosedate: (new Date()).getTime(),
     location:"上海海洋大学",
     userimg:"https://onlineimg.alni.eu.org/raw/homepage/head.jpg",
     selecttime:"全时段",
@@ -126,13 +135,55 @@ Page({
       selectSortType: selectedGender
     });
   },
+  nextDay: function() {
+    var date =  new Date(this.data.choosedate);
+    var nowdate = new Date();
+    var ifshow = this.data.ifshowdate;
+    date.setDate(date.getDate() + 1);
+    if(date.getTime() > nowdate.getTime()){
+      ifshow.left = true;
+    }
+
+
+    this.setData({
+      choosedate: date,
+      ifshowdate:ifshow,
+      thedate:{
+        year:date.getFullYear(),
+        month:date.getMonth()+1,
+        day:date.getDate()
+      }
+    });
+  },
+  upDay: function() {
+    var date =  new Date(this.data.choosedate);
+    var ifshow = this.data.ifshowdate;
+    date.setDate(date.getDate() - 1);
+    if(date.getTime() < new Date().getTime()){
+      ifshow.left = false;
+    }
+
+    this.setData({
+      choosedate: date,
+      ifshowdate:ifshow,
+      thedate:{
+        year:date.getFullYear(),
+        month:date.getMonth()+1,
+        day:date.getDate()
+      }
+    });
+  },
   onLoad: function() {
     // 获取当前日期
     var currentDate = new Date();
-
     // 将当前日期设置到页面数据中
     this.setData({
-      choosedate: currentDate.toLocaleDateString()
+      choosedate: currentDate,
+      thedate:{
+        year:currentDate.getFullYear(),
+        month:currentDate.getMonth()+1,
+        day:currentDate.getDate()
+      }
     });
   }
 });
