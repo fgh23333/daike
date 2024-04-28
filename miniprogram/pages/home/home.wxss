@@ -134,6 +134,7 @@
 }
 .group_3 {
   width: 256.9rpx;
+  margin-top: 130rpx;
 }
 .image_7 {
   width: 35rpx;
@@ -165,7 +166,7 @@
   line-height: 44.22rpx;
 }
 .group_2 {
-
+  margin-top: 160rpx;
   width: 130rpx;
 }
 .section_7 {

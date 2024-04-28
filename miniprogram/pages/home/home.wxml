@@ -112,7 +112,7 @@
         </view>
       </view>
       <view class="flex-row justify-end mt-83">
-        <van-popup show="{{ show }}" bind:close="onClose" round custom-class="popup_1" closeable>
+        <van-popup show="{{ show }}" bind:close="onClose" round custom-class="popup_1" closeable duration="200">
           <pupPan classData="{{chooseclass}}"></pupPan>
         </van-popup>
       </view>
