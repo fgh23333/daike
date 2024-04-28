@@ -74,6 +74,7 @@
                 <text class="font_4 text_15 mt-15-5">添加一个代课报价</text>
               </view>
             </view>
+            <view wx:if="{{formList}}">
             <view wx:for="{{formList}}" wx:key="index" data-item="{{item}}" bindtap="handleItemClick">
               <view class="flex-col self-stretch section_15 fade-animation">
                 <view class="flex-row">
@@ -107,6 +108,9 @@
             <view class="flex-row justify-center group_13">
               <text class="font_4 text_15 mt-15-5">--- 没有更多内容啦 ---</text>
             </view>
+            </view>
+            <view wx:if="{{!formList}}">
+              <van-empty image="https://onlineimg.alni.eu.org/raw/homepage/homenofound.png" description="没有找到任何结果呢，嘤嘤嘤QWQ" /></view>
           </view>
           
         </view>

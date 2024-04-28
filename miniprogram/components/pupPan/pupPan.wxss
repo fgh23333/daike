@@ -27,13 +27,13 @@
 }
 
 .section {
-  padding: 34.46rpx 29.39rpx 60.81rpx;
+  padding: 30rpx 30rpx 50rpx;
   background-color: #ffffff;
   border-radius: 30.41rpx;
 }
 
 .popgroup {
-  width: 520rpx;
+  width: 550rpx;
 }
 
 .popimage {
@@ -232,7 +232,7 @@
 }
 .ml-26{
   position: absolute;
-  right: 50rpx;
+  right: 35rpx;
 }
 .button_1{
   margin-left: 10rpx;
@@ -240,5 +240,4 @@
 }
 .button_2{
   margin-left: 10rpx;
-  margin-right: 10rpx;
 }

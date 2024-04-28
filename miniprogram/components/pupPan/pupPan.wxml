@@ -47,8 +47,8 @@
         <text class="text_14 ml-7">{{classData.money}}</text>
       </view>
       <view class="ml-26 flex-row">
-        <van-button plain type="info" round size="small" class="button_1">聊一聊</van-button>
-        <van-button type="info" round size="small" class="button_2">立即接单</van-button>
+        <van-button plain type="info" round size="normal" class="button_1">聊一聊</van-button>
+        <van-button type="info" round size="normal" class="button_2">立即接单</van-button>
       </view>
     </view>
   </view>

@@ -131,6 +131,7 @@
   background-image: url('https://onlineimg.alni.eu.org/raw/homepage/topbg.png');
   background-position: -25rpx -25.62rpx;
   width: 770rpx;
+  background-attachment:fixed;
 }
 .group_3 {
   width: 256.9rpx;
