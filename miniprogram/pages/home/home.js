@@ -11,6 +11,8 @@ Page({
     selectsex:"性别不限",
     selectSortType:"时间顺序",
     sortList:["时间顺序","时间倒序","价格降序","价格升序"],
+    show:false,
+    chooseclass:{},
     formList:[
       {
         "id": "111",
@@ -68,6 +70,14 @@ Page({
       },
     ],
   },
+  showPopup() {
+    console.log(111);
+    this.setData({ show: true });
+  },
+
+  onClose() {
+    this.setData({ show: false });
+  },
   handleDateChange(e) {
     this.setData({
       choosedate: e.detail.value
@@ -77,9 +87,13 @@ Page({
     // 通过 e.currentTarget.dataset.item 获取到传递的参数
     let clickedItem = e.currentTarget.dataset.item;
     console.log('点击的 item 是：', clickedItem);
-    wx.navigateTo({
-      url: `/pages/detail/detail?itemId=${encodeURIComponent(clickedItem.id)}`, // 通过URL传递参数
+    this.setData({
+      chooseclass : clickedItem
     });
+    this.showPopup();
+    // wx.navigateTo({
+    //   url: `/pages/detail/detail?itemId=${encodeURIComponent(clickedItem.id)}`, // 通过URL传递参数
+    // });
   },
   goToPublish: function() {
     console.log('goToPublish');

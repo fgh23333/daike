@@ -12,7 +12,6 @@
     "navigationBarTitleText": "代课小程序",
     "navigationStyle": "default"
   },
-  "style": "v2",
   "tabBar": {
     "list": [
       {
