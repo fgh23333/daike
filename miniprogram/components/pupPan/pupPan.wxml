@@ -1,9 +1,9 @@
-<view class="flex-col justify-start items-center page">
+<view class="flex-col justify-start items-center poppage">
   <view class="flex-col section">
-    <view class="flex-col self-start group">
+    <view class="flex-col self-start popgroup">
       <view class="flex-row items-center self-stretch">
         <image
-          class="shrink-0 image"
+          class="shrink-0 popimage"
           src="https://ide.code.fun/api/image?token=662dc125d578370011c4a944&name=e1a5047e2d2941f4dbe3e4bc26b90540.png"
         />
         <view class="flex-col shrink-0 group_2 ml-8-5">
@@ -11,25 +11,25 @@
           <text class="mt-10 self-stretch font text_2">2024-4-28 10:47 发布</text>
         </view>
       </view>
-      <text class="self-end text_3">高等数学</text>
+      <text class="text_3">{{classData.classname}}</text>
       <view class="flex-row self-stretch group_3">
         <image
           class="image_2"
-          src="https://ide.code.fun/api/image?token=662dc125d578370011c4a944&name=6ccb0023919bd88addbf65295998d56e.png"
+          src="https://onlineimg.alni.eu.org/raw/homepage/homeb.png"
         />
         <text class="font_2 text_4 ml-5-5">教室</text>
       </view>
-      <text class="self-start font_3 text_5">1102</text>
+      <text class="self-start font_3 text_5">{{classData.classroom}}</text>
       <view class="flex-row self-stretch group_4">
         <view class="section_2"></view>
-        <text class="ml-6 font_2 text_6">时间</text>
+        <text class="ml-6 font_2 text_6 ml-5-5">时间</text>
       </view>
-      <text class="self-stretch font_3 text_7">2024-4-29 10：05-11：40</text>
+      <text class="self-stretch font_3 text_7">{{classData.time}}</text>
       <view class="flex-row self-stretch group_5">
         <view class="section_2"></view>
         <text class="font_2 text_8 ml-5-5">性别</text>
       </view>
-      <text class="self-start font_3 text_9">不限</text>
+      <text class="self-start font_3 text_9">{{classData.sex}}</text>
       <view class="flex-row self-stretch group_6">
         <view class="section_2"></view>
         <text class="font_2 text_10 ml-5-5">备注</text>
@@ -42,7 +42,7 @@
           class="shrink-0 image_3"
           src="https://ide.code.fun/api/image?token=662dc125d578370011c4a944&name=1bf38d80d11bec9e7cd7329834b1da2c.png"
         />
-        <text class="text_14 ml-7">35</text>
+        <text class="text_14 ml-7">{{classData.money}}</text>
       </view>
       <view class="ml-26 flex-row">
         <view class="flex-col justify-start items-center text-wrapper"><text class="font text_12">询问</text></view>

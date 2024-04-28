@@ -5,12 +5,8 @@ Component({
 	properties: {
 		// 接收父组件传过来的数据
 		// 属性名字必须和父组件那边的一样，和vue的prop传参类似
-		src: {
-			type: String,
-			value: ''
-		},
-		content: {
-			type: String,
+		classData: {
+			type: JSON,
 			value: ''
 		}
 	},
