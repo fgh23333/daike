@@ -2,5 +2,6 @@
   "usingComponents": {
     "van-popup": "@vant/weapp/popup/index",
     "pupPan":"../../components/pupPan/pupPan"
-  }
+  },
+  "navigationStyle": "custom"
 }
