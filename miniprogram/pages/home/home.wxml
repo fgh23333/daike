@@ -112,8 +112,9 @@
         </view>
       </view>
       <view class="flex-row justify-end mt-83">
-        <van-button type="primary" bind:click="showPopup">显示弹窗</van-button>
-        <van-popup show="{{ show }}" bind:close="onClose" round custom-class="popup_1" closeable>{{chooseclass.classname}}</van-popup>
+        <van-popup show="{{ show }}" bind:close="onClose" round custom-class="popup_1" closeable>
+          <pupPan></pupPan>
+        </van-popup>
       </view>
     </view>
 

@@ -529,5 +529,5 @@
   margin-top: 20rpx;
 }
 .popup_1{
-  padding: 100rpx 100rpx 100rpx;
+  width: 80%;
 }
