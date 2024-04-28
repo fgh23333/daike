@@ -1,18 +1,17 @@
 <view class="flex-col page">
 	<view class="flex-row justify-between section">
-		<text class="self-start text">添加代课订单</text>
-		<image class="self-center image" src="https://onlineimg.alni.eu.org/raw/daike/post/post_background.png" />
+		<text class="self-start text"></text>
 	</view>
 	<form class="biaodanshuxing">
 		<view class="flex-col relative section_2">
 			<view class="flex-col group">
 				<!-- 选择性别 -->
 				<picker mode="selector" range="{{genderArray}}" class=" group_2" bindchange="genderChange">
-					<view class="flex-row justify-between group_1">
+					<view class="flex-row justify-between group_1 ">
 						<text class="font_1 text_2">性别</text>
 						<view class="flex-row group_3">
 							<text class="font text_3">{{selectedGender}}</text>
-							<image class="ml-8 shrink-0 image_2" src="https://ide.code.fun/api/image?token=6622366e9554750011977151&name=6d7ef056c712a0891c1853c2f3a372a1.png" />
+							<image class="ml-8 shrink-0 image_2" src="https://onlineimg.alni.eu.org/raw/daike/launch(new2)/right.png" />
 						</view>
 					</view>
 				</picker>
@@ -20,8 +19,8 @@
 
 
 				<!-- 选择课程 -->
-				<view class="flex-row justify-between group_2">
-					<text class="font_1 text_4">课程</text>
+				<view class="flex-row justify-between group_1 group_2 height_1">
+					<text class="font_1 text_2">课程</text>
 					<input class="text_5 font text_6" type="text" placeholder="请输入课程名" style="text-align: right;" />
 				</view>
 				<!-- contactarray和contactcChange都是联系方式 -->
@@ -31,42 +30,35 @@
 							<text class="font_1 text_2">联系方式</text>
 							<view class="flex-row group_3">
 								<text class="font text_3">{{selectedcontact}}</text>
-								<image class="ml-8 shrink-0 image_2" src="https://ide.code.fun/api/image?token=6622366e9554750011977151&name=6d7ef056c712a0891c1853c2f3a372a1.png" />
+								<image class="ml-8 shrink-0 image_2" src="https://onlineimg.alni.eu.org/raw/daike/launch(new2)/right.png" />
 							</view>
 						</view>
 					</picker>
-				</view>
-				<view class="flex-row group justify-between input">
+				
+				<view class="flex-row group justify-between input group_2 group_1 height_1">
 
 					<text class="font_1 text_7" item-align="center" style="align-items: center;">微信/电话</text>
 					<input class="text_8 font text_1" type="text" placeholder="请输入微信号/电话号" style="text-align: right;" />
 				</view>
 
-				<view class="flex-col group">
-					<picker-view mode="selector" range="{{TimeArray}}" class=" group_2" bindchange="Timechange">
-						<picker-view-column>
-							<view wx:for="{{months}}" wx:key="{{index}}">{{item}}</view>
-						</picker-view-column>
-						<picker-view-column>
-							<view wx:for="{{days}}" wx:key="{{index}}">{{item}}</view>
-						</picker-view-column>
-						<picker-view-column>
-							<view wx:for="{{timeslots}}" wx:key="{{index}}">{{item}}</view>
-						</picker-view-column>
-						<view class="flex-row justify-between group_1">
-							<text class="font_1 text_2">时间段</text>
-							<view class="flex-row group_3">
-								<text class="font text_3">{{selectedtime}}</text>
-								<image class="ml-8 shrink-0 image_2" src="https://ide.code.fun/api/image?token=6622366e9554750011977151&name=6d7ef056c712a0891c1853c2f3a372a1.png" />
+				
+            
+        <picker mode="multiSelector" range="{{monthDayTime}}" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange">
+          <view class="flex-row justify-between group_7 group_2">
+              <text class="font_1 text_02">选择时间</text>
+              <view class="flex-row group_3">
+								<text class="font text_3">{{selectedcontact}}</text>
+								<image class="ml-8 shrink-0 image_2" style="text-align: right;" src="https://onlineimg.alni.eu.org/raw/daike/launch(new2)/right.png" />
 							</view>
-						</view>
-					</picker-view>
-					<view class="flex-row justify-between group_7">
+          </view>
+        </picker>
+        
+					<view class="flex-row justify-between group_7 height_1 group_1">
 						<text class="font_1 text_11">时间</text>
 						<input class="text_22 font" type="text" placeholder="已选时间段则无需填写" style="text-align: right;" />
 					</view>
 				</view>
-				<view class="flex-row justify-between group_8">
+				<view class="flex-row justify-between group_8 height_1">
 					<text class="font_1 text_13">价格</text>
 					<input class="text_23 font text_14" type="number" placeholder="请输入数值" style="text-align: right;" />
 				</view>

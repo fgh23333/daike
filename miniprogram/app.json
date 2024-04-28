@@ -39,6 +39,7 @@
   "lazyCodeLoading": "requiredComponents",
   "usingComponents": {
     "van-button": "@vant/weapp/button/index",
-    "van-icon": "@vant/weapp/icon/index"
+	"van-icon": "@vant/weapp/icon/index",
+	"full-cell": "/components/full-cell/full-cell"
   }
 }
