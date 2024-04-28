@@ -21,6 +21,7 @@
   padding-bottom: 200rpx;
   background-image: url('https://onlineimg.alni.eu.org/raw/daike/launch(new2)/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E6%B8%90%E5%8F%98%E4%B8%96%E7%95%8C%E8%AF%BB%E4%B9%A6%E6%97%A5%E5%AE%A3%E4%BC%A0%E6%B5%B7%E6%8A%A5.png'); /* 图片路径，如果是网络图片需完整URL */
   background-size: cover; /* 或其他背景尺寸控制，如contain */
+  background-attachment:local;
   height: 100%;
   width: 100%;
   overflow-y: auto;
@@ -200,13 +201,21 @@
   padding: 10px; /* 可以添加内边距让内容和边框有一定距离 */
 }
 .button_henguolai{
-  margin-top: 60rpx;
+  /* margin-top: 60rpx; */
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 .button_1{
   background-color: lightblue;
   border-bottom: solid 1rpx #1b78ff;
+}
+.button_cancel{
+  margin-left:55rpx;
+  margin-right: 80rpx;
+}
+.button_commit{
+  margin-right: 30rpx;
 }
 .button_2{
   width:100px;

@@ -6,11 +6,11 @@
 		<view class="flex-col relative section_2">
 			<view class="flex-col group">
 				<!-- 选择性别 -->
-				<picker mode="selector" range="{{genderArray}}" class=" group_2" bindchange="genderChange">
+				<picker mode="selector" range="{{genders}}" class=" group_2" bindchange="genderChange">
 					<view class="flex-row justify-between group_1 ">
 						<text class="font_1 text_2">性别</text>
 						<view class="flex-row group_3">
-							<text class="font text_3">{{selectedGender}}</text>
+							<text class="font_1 text_3">{{selectedGender}}</text>
 							<image class="ml-8 shrink-0 image_2" src="https://onlineimg.alni.eu.org/raw/daike/launch(new2)/right.png" />
 						</view>
 					</view>
@@ -29,7 +29,7 @@
 						<view class="flex-row justify-between group_1">
 							<text class="font_1 text_2">联系方式</text>
 							<view class="flex-row group_3">
-								<text class="font text_3">{{selectedcontact}}</text>
+								<text class="font_1 text_3">{{selectedcontact}}</text>
 								<image class="ml-8 shrink-0 image_2" src="https://onlineimg.alni.eu.org/raw/daike/launch(new2)/right.png" />
 							</view>
 						</view>
@@ -47,7 +47,7 @@
           <view class="flex-row justify-between group_7 group_2">
               <text class="font_1 text_02">选择时间</text>
               <view class="flex-row group_3">
-								<text class="font text_3">{{selectedcontact}}</text>
+								<text class="font text_3">{{selectedtime}}</text>
 								<image class="ml-8 shrink-0 image_2" style="text-align: right;" src="https://onlineimg.alni.eu.org/raw/daike/launch(new2)/right.png" />
 							</view>
           </view>
@@ -78,12 +78,12 @@
 			<switch bindchange="switchChange2" checked="{{switchValue2}}"/>
 		</view>
     </view>
-		<view class="textarea1">
-			<textarea placeholder="请输入备注" class="flex-col justify-start items-start input_2 textarea"></textarea>
+		<view class="textarea1" >
+			<textarea  maxlength='50' placeholder-style='font-size:30rpx;' auto-height="true" placeholder="请输入备注" class="flex-col justify-start items-start input_2 textarea"></textarea>
 		</view>
-		<view class="button_henguolai" maxlength='50' placeholder-style='font-size:30rpx;' auto-height="true">
-			<button class="button_2">取消</button>
-			<button class="button_1 button_2">提交</button>
+		<view class="button_henguolai">
+			<van-button plain type="info" round size="large" class="button_2 button_cancel" >取消</van-button>
+        <van-button  type="info" round size="large" class="button_2 button_commit">提交</van-button>
 		</view>
 	</form>
 </view>
