@@ -53,9 +53,13 @@
           </view>
         </picker>
         
-					<view class="flex-row justify-between group_7 height_1 group_1">
+					<view class="flex-row justify-between group_7 height_1 group">
 						<text class="font_1 text_11">时间</text>
 						<input class="text_22 font" type="text" placeholder="已选时间段则无需填写" style="text-align: right;" />
+					</view>
+          <view class="flex-row justify-between group_7 height_1 group ">
+						<text class="font_1 text_11">教室</text>
+						<input class="text_22 font" type="text" placeholder="请输入教室" style="text-align: right;" />
 					</view>
 				</view>
 				<view class="flex-row justify-between group_8 height_1">
@@ -63,16 +67,21 @@
 					<input class="text_23 font text_14" type="number" placeholder="请输入数值" style="text-align: right;" />
 				</view>
 			</view>
-		</view>
+		
 		<!-- 需要回答问题？ -->
-		<view class="flex-row justify-between items-center section_3">
-			<text class="font_1 text_19">需要回答问题/演讲</text>
-			<switch checked="" bindchange=""/>
+		<view class="flex-row justify-between group_7 height_1 group_1 group_2">
+			<text class="font_1 text_11">需要回答问题/演讲</text>
+			<switch bindchange="switchChange1" checked="{{switchValue1}}"/>
 		</view>
+    <view class="flex-row justify-between group_7 height_1 group_1 group_2">
+			<text class="font_1 text_11">可以玩手机</text>
+			<switch bindchange="switchChange2" checked="{{switchValue2}}"/>
+		</view>
+    </view>
 		<view class="textarea1">
-			<textarea class="flex-col justify-start items-start input_2 textarea"></textarea>
+			<textarea placeholder="请输入备注" class="flex-col justify-start items-start input_2 textarea"></textarea>
 		</view>
-		<view class="button_henguolai">
+		<view class="button_henguolai" maxlength='50' placeholder-style='font-size:30rpx;' auto-height="true">
 			<button class="button_2">取消</button>
 			<button class="button_1 button_2">提交</button>
 		</view>
