@@ -1,4 +1,4 @@
-
+const db = wx.cloud.database()
 Page({
   data: {
     username:"靳取",
@@ -84,6 +84,14 @@ Page({
         "classroom":"1103"
       },
     ],
+  },
+  getdate(){
+    db.collection("orderForm").get({
+      success:res=>{
+        console.log(res.data)
+      }
+
+    })
   },
   showPopup() {
     console.log(111);
