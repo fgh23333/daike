@@ -1,5 +1,4 @@
 
-
 Page({
   data: {
     username:"靳取",
@@ -26,7 +25,9 @@ Page({
     sortList:["时间顺序","时间倒序","价格降序","价格升序"],
     show:false,
     chooseclass:{},
-    formList:[
+    formList:"",
+    ifLoading:false,
+    testformList:[
       {
         "id": "111",
         "date":"2024-4-28",
@@ -84,12 +85,6 @@ Page({
       },
     ],
   },
-  showLoading(){
-    Toast.loading({
-      message: '加载中...',
-      forbidClick: true,
-    });
-  },
   showPopup() {
     console.log(111);
     this.setData({ show: true });
@@ -97,6 +92,24 @@ Page({
 
   onClose() {
     this.setData({ show: false });
+  },
+  dataUpdata(){
+    var nowdate = new Date();
+    this.setData({
+      ifLoading:true,
+      formList:""
+    });
+    setTimeout(()=>{
+      if(this.data.thedate.year==nowdate.getFullYear()&&this.data.thedate.month==nowdate.getMonth()+1&&this.data.thedate.day==nowdate.getDate()){
+        this.setData({
+          formList:this.data.testformList
+        });
+      }
+      this.setData({
+        ifLoading:false,
+      });
+    },1000)
+
   },
   handleDateChange(e) {
     const dateStr = e.detail.value; // 获取日期字符串
@@ -130,6 +143,7 @@ Page({
         string: year.toString()+"-"+(month+1).toString()+"-"+day.toString()
       }
     });
+    this.dataUpdata();
   },
   handleItemClick: function(e) {
     // 通过 e.currentTarget.dataset.item 获取到传递的参数
@@ -144,9 +158,13 @@ Page({
     // });
   },
   goToPublish: function() {
-    console.log('goToPublish');
     wx.switchTab({
       url: '/pages/new2/new2'
+    });
+  },
+  goToMy: function() {
+    wx.switchTab({
+      url: '/pages/index/index'
     });
   },
   onShareAppMessage() {
@@ -158,6 +176,7 @@ Page({
     this.setData({
       selecttime: selectedGender
     });
+    this.dataUpdata();
   },
   sexChange: function(e) {
     const index = e.detail.value;
@@ -165,6 +184,7 @@ Page({
     this.setData({
       selectsex: selectedGender
     });
+    this.dataUpdata();
   },
   sortChange: function(e) {
     const index = e.detail.value;
@@ -172,6 +192,7 @@ Page({
     this.setData({
       selectSortType: selectedGender
     });
+    this.dataUpdata();
   },
   nextDay: function() {
     var date =  new Date(this.data.choosedate);
@@ -181,8 +202,6 @@ Page({
     if(date.getTime() > nowdate.getTime()){
       ifshow.left = true;
     }
-
-    this.showLoading();
     this.setData({
       choosedate: date,
       ifshowdate:ifshow,
@@ -193,6 +212,7 @@ Page({
         string:date.getFullYear().toString()+"-"+(date.getMonth()+1).toString()+"-"+date.getDate().toString()
       }
     });
+    this.dataUpdata();
   },
   upDay: function() {
     var date =  new Date(this.data.choosedate);
@@ -211,9 +231,10 @@ Page({
         year:date.getFullYear(),
         month:date.getMonth()+1,
         day:date.getDate(),
-        string:date.getFullYear().toString()+"-"+(date.getMonth()+1).toString()+"-"+date.getDate().toString()
+        string:date.getFullYear().toString()+"-"+(date.getMonth()+1).toString()+"-"+date.getDate().toString(),
       }
     });
+      this.dataUpdata();
     }
   },
   onLoad: function() {
@@ -228,6 +249,7 @@ Page({
         day:currentDate.getDate(),
         string:currentDate.getFullYear().toString()+"-"+(currentDate.getMonth()+1).toString()+"-"+currentDate.getDate().toString()
       },
+        formList: this.data.testformList,
       today:currentDate.getFullYear().toString()+"-"+(currentDate.getMonth()+1).toString()+"-"+currentDate.getDate().toString()
     });
   }

@@ -17,7 +17,7 @@
       <view class="flex-col items-start self-start relative group_2">
         <view class="section_7"></view>
         <view class="relative section_8"></view>
-        <image class="image_6 pos_4" src="{{userimg}}" />
+        <image class="image_6 pos_4" src="{{userimg}}" bindtap="goToMy"/>
 
       </view>
     </view>
@@ -26,7 +26,7 @@
         <text class="self-start text_7">当前订单</text>
         <image class="self-start image_8" src="https://onlineimg.alni.eu.org/raw/homepage/homebaojia.png" />
         <view class="flex-col self-stretch group_5">
-          <view class="flex-row justify-center items-center relative section_10" mode="date" bindchange="handleDateChange" value="{{choosedate}}">
+          <view class="flex-row justify-center items-center relative section_10">
             <view class="flex-row items-center pos_11" bindtap="upDay" wx:if="{{ifshowdate.left}}">
             <image class="shrink-0 image_9 ml-7" src="https://onlineimg.alni.eu.org/raw/homepage/homeleft.png" />
               <text class="font_2 text_8">前一天</text>
@@ -117,12 +117,16 @@
             </view>
             </view>
             <view wx:if="{{!formList}}">
+              <view wx:if="{{!ifLoading}}">
               <van-empty image="https://onlineimg.alni.eu.org/raw/homepage/homenofound.png" description="没有找到任何结果呢，嘤嘤嘤QWQ" /></view>
+            </view>
+            <view wx:if="{{ifLoading}}" class="section_18">
+              <van-loading size="24px" color="#1989fa">加载中...</van-loading>
+          </view>
           </view>
           
         </view>
       </view>
-      <van-toast id="van-toast" />
       <view class="flex-row justify-end mt-83">
         <van-popup show="{{ show }}" bind:close="onClose" round custom-class="popup_1" closeable duration="200">
           <pupPan classData="{{chooseclass}}"></pupPan>

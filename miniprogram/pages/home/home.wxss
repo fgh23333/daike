@@ -538,3 +538,10 @@
 }
 .popup_1{
 }
+.section_18{
+  display: flex;
+  width: 100%;
+  margin-top: 100rpx;
+  margin-bottom: 200rpx;
+  justify-content: center;
+}

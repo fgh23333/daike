@@ -3,7 +3,7 @@
     "van-popup": "@vant/weapp/popup/index",
     "pupPan":"../../components/pupPan/pupPan",
     "van-empty": "@vant/weapp/empty/index",
-    "van-toast": "@vant/weapp/toast/index"
+    "van-loading": "@vant/weapp/loading/index"
     
   },
   "navigationStyle": "custom"
