@@ -1,11 +1,15 @@
+
+
 Page({
   data: {
     username:"靳取",
     userid:100,
+    today:"",
     thedate:{
       year:0,
       month:0,
-      day:0
+      day:0,
+      string:""
     },
     ifshowdate:{
       "left": false,
@@ -80,6 +84,12 @@ Page({
       },
     ],
   },
+  showLoading(){
+    Toast.loading({
+      message: '加载中...',
+      forbidClick: true,
+    });
+  },
   showPopup() {
     console.log(111);
     this.setData({ show: true });
@@ -89,8 +99,36 @@ Page({
     this.setData({ show: false });
   },
   handleDateChange(e) {
+    const dateStr = e.detail.value; // 获取日期字符串
+    const dateParts = dateStr.split('-'); // 分割日期字符串
+    const year = parseInt(dateParts[0], 10);
+    const month = parseInt(dateParts[1], 10) - 1; // 注意JavaScript中的月份是从0开始的
+    const day = parseInt(dateParts[2], 10);
+
+    const selectedDate = new Date(year, month, day);
+    if (selectedDate.getTime() > (new Date()).getTime()) {
+      this.setData({
+        ifshowdate: {
+          "left": true,
+          "right": true
+        }
+      });
+    } else {
+      this.setData({
+        ifshowdate: {
+          "right": true,
+          "left": false
+        }
+      });
+    }
     this.setData({
-      choosedate: e.detail.value
+      choosedate: selectedDate,
+      thedate: {
+        year: year,
+        month: month + 1,
+        day: day,
+        string: year.toString()+"-"+(month+1).toString()+"-"+day.toString()
+      }
     });
   },
   handleItemClick: function(e) {
@@ -144,20 +182,23 @@ Page({
       ifshow.left = true;
     }
 
-
+    this.showLoading();
     this.setData({
       choosedate: date,
       ifshowdate:ifshow,
       thedate:{
         year:date.getFullYear(),
         month:date.getMonth()+1,
-        day:date.getDate()
+        day:date.getDate(),
+        string:date.getFullYear().toString()+"-"+(date.getMonth()+1).toString()+"-"+date.getDate().toString()
       }
     });
   },
   upDay: function() {
     var date =  new Date(this.data.choosedate);
     var ifshow = this.data.ifshowdate;
+    if(date.getTime() > new Date().getTime()){
+
     date.setDate(date.getDate() - 1);
     if(date.getTime() < new Date().getTime()){
       ifshow.left = false;
@@ -169,9 +210,11 @@ Page({
       thedate:{
         year:date.getFullYear(),
         month:date.getMonth()+1,
-        day:date.getDate()
+        day:date.getDate(),
+        string:date.getFullYear().toString()+"-"+(date.getMonth()+1).toString()+"-"+date.getDate().toString()
       }
     });
+    }
   },
   onLoad: function() {
     // 获取当前日期
@@ -182,8 +225,10 @@ Page({
       thedate:{
         year:currentDate.getFullYear(),
         month:currentDate.getMonth()+1,
-        day:currentDate.getDate()
-      }
+        day:currentDate.getDate(),
+        string:currentDate.getFullYear().toString()+"-"+(currentDate.getMonth()+1).toString()+"-"+currentDate.getDate().toString()
+      },
+      today:currentDate.getFullYear().toString()+"-"+(currentDate.getMonth()+1).toString()+"-"+currentDate.getDate().toString()
     });
   }
 });

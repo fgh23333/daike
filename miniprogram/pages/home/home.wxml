@@ -32,10 +32,12 @@
               <text class="font_2 text_8">前一天</text>
               
             </view>
+            <picker class="flex-row items-center picker_1" bindchange="handleDateChange" mode="date" value="{{thedate.string}}" start="{{today}}">
             <view class="flex-row items-center">
               <image class="shrink-0 image_10" src="https://onlineimg.alni.eu.org/raw/homepage/homedata.png" />
               <text class="font_3 text_9 ml-5">{{thedate.year}}-{{thedate.month}}-{{thedate.day}}</text>
-            </view>
+              </view>
+            </picker>
             <view class="flex-row items-center pos_5" bindtap="nextDay" wx:if="{{ifshowdate.right}}">
               <text class="font_2 text_8">后一天</text>
               <image class="shrink-0 image_9 ml-7" src="https://onlineimg.alni.eu.org/raw/homepage/homeright.png" />
@@ -120,6 +122,7 @@
           
         </view>
       </view>
+      <van-toast id="van-toast" />
       <view class="flex-row justify-end mt-83">
         <van-popup show="{{ show }}" bind:close="onClose" round custom-class="popup_1" closeable duration="200">
           <pupPan classData="{{chooseclass}}"></pupPan>

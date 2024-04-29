@@ -223,9 +223,10 @@
   margin: 20rpx 30rpx 0;
 }
 .section_10 {
-  padding: 16rpx 20rpx 12rpx;
+  height: 60rpx;
+
   background-color: #c9e6fa66;
-  border-radius: 25rpx;
+  border-radius: 35rpx;
 }
 .image_10 {
   width: 26rpx;
@@ -233,12 +234,10 @@
 }
 .font_3 {
   font-size: 24rpx;
-  font-family: 阿里巴巴普惠体;
-  line-height: 21.92rpx;
   color: #339af0;
 }
-.text_9 {
-  line-height: 17.14rpx;
+.picker_1 {
+  height: 50rpx;
 }
 .pos_5 {
   position: absolute;
