@@ -42,6 +42,7 @@
 		<view class="cellGroup">
 			<full-cell class="cell" src="https://onlineimg.alni.eu.org/raw/daike/my/my_about_us.png" content="关于我们"></full-cell>
 			<full-cell class="cell" src="https://onlineimg.alni.eu.org/raw/daike/my/my_change_account.png" content="切换账号"></full-cell>
+			<full-cell class="cell" src="https://onlineimg.alni.eu.org/raw/daike/my/my_change_account.png" content="手机换绑" bindtap="changePhone"></full-cell>
 		</view>
 	</view>
 </view>

@@ -1,0 +1,30 @@
+.container {
+  width: 70vw;
+  height: 60vh;
+  margin: 150rpx auto;
+  border: 1px solid black;
+  padding: 0rpx;
+}
+.container .title {
+  text-align: left;
+  width: 100%;
+  font-size: 40rpx;
+  letter-spacing: 2rpx;
+}
+.container .formContainer {
+  border: 1px solid black;
+}
+.container .formContainer .phoneForm .cover {
+  border-bottom: 1px solid #666666;
+}
+.container .formContainer .phoneForm .getCode {
+  color: #ff7815;
+  background-color: white;
+  border: 1rpx solid #ff7815;
+  border-radius: 0;
+  width: 170rpx;
+  height: 50rpx;
+  font-size: 26rpx;
+  padding: 0;
+  line-height: 50rpx;
+}

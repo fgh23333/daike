@@ -1,0 +1,15 @@
+<view class="container">
+	<view class="title">绑定新手机号</view>
+	<view class="formContainer">
+		<form class="phoneForm">
+			<view class="cover">
+				<input type="number" class="phone" />
+			</view>
+			<view class="cover">
+				<input type="number" class="code" />
+			</view>
+			<button class="getCode">获取验证码</button>
+			<button class="submit">确认修改</button>
+		</form>
+	</view>
+</view>
