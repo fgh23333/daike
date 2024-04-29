@@ -3,13 +3,13 @@
 	<view class="formContainer">
 		<form class="phoneForm">
 			<view class="cover">
-				<input type="number" class="phone" />
+				<input type="number" class="inputbox" id="phone" placeholder="请输入手机号" />
 			</view>
 			<view class="cover">
-				<input type="number" class="code" />
+				<input type="number" class="inputbox" id="code" placeholder="请输入验证码" />
 			</view>
 			<button class="getCode">获取验证码</button>
-			<button class="submit">确认修改</button>
 		</form>
 	</view>
+	<button class="submit">确认修改</button>
 </view>

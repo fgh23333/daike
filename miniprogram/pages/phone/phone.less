@@ -2,8 +2,9 @@
 	width: 70vw;
 	height: 60vh;
 	margin: 150rpx auto;
-	border: 1px solid black;
+	// border: 1px solid black;
 	padding: 0rpx;
+	position: relative;
 
 	.title {
 		text-align: left;
@@ -13,23 +14,52 @@
 	}
 
 	.formContainer {
-		border: 1px solid black;
+		width: 100%;
+		margin: 0;
+		position: absolute;
+		top: 100rpx;
 
 		.phoneForm {
 			.cover {
-				border-bottom: 1px solid #666666;
+				border-bottom: 1px solid #D8D8D8;
+
+				.inputbox {
+					height: 80rpx;
+					font-size: 32rpx;
+				}
+
+				.code {
+					height: 80rpx;
+				}
 			}
+
 			.getCode {
 				color: #ff7815;
-				background-color: white;
 				border: 1rpx solid #ff7815;
-				border-radius: 0;
+				border-radius: 0rpx;
 				width: 170rpx;
 				height: 50rpx;
 				font-size: 26rpx;
 				padding: 0;
 				line-height: 50rpx;
+				display: block;
+				z-index: 20;
+				position: absolute;
+				top: 100rpx;
+				right: 0;
+				background-color: transparent;
 			}
 		}
+	}
+
+	.submit {
+		width: 70vw;
+		height: 80rpx;
+		background: linear-gradient(to right, rgb(255, 150, 68), rgb(255, 111, 62), );
+		border-radius: 40rpx;
+		line-height: 80rpx;
+		font-size: 30rpx;
+		padding: 0;
+		color: white;
 	}
 }

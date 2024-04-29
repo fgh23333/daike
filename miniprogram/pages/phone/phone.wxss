@@ -2,8 +2,8 @@
   width: 70vw;
   height: 60vh;
   margin: 150rpx auto;
-  border: 1px solid black;
   padding: 0rpx;
+  position: relative;
 }
 .container .title {
   text-align: left;
@@ -12,19 +12,44 @@
   letter-spacing: 2rpx;
 }
 .container .formContainer {
-  border: 1px solid black;
+  width: 100%;
+  margin: 0;
+  position: absolute;
+  top: 100rpx;
 }
 .container .formContainer .phoneForm .cover {
-  border-bottom: 1px solid #666666;
+  border-bottom: 1px solid #D8D8D8;
+}
+.container .formContainer .phoneForm .cover .inputbox {
+  height: 80rpx;
+  font-size: 32rpx;
+}
+.container .formContainer .phoneForm .cover .code {
+  height: 80rpx;
 }
 .container .formContainer .phoneForm .getCode {
   color: #ff7815;
-  background-color: white;
   border: 1rpx solid #ff7815;
-  border-radius: 0;
+  border-radius: 0rpx;
   width: 170rpx;
   height: 50rpx;
   font-size: 26rpx;
   padding: 0;
   line-height: 50rpx;
+  display: block;
+  z-index: 20;
+  position: absolute;
+  top: 100rpx;
+  right: 0;
+  background-color: transparent;
+}
+.container .submit {
+  width: 70vw;
+  height: 80rpx;
+  background: linear-gradient(to right, #ff9644, #ff6f3e);
+  border-radius: 40rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  padding: 0;
+  color: white;
 }
