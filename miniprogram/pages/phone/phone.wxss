@@ -24,8 +24,8 @@
   height: 80rpx;
   font-size: 32rpx;
 }
-.container .formContainer .phoneForm .cover .code {
-  height: 80rpx;
+.container .formContainer .phoneForm .cover .placeholderStyle {
+  color: #cccccc;
 }
 .container .formContainer .phoneForm .getCode {
   color: #ff7815;
