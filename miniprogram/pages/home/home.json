@@ -2,7 +2,8 @@
   "usingComponents": {
     "van-popup": "@vant/weapp/popup/index",
     "pupPan":"../../components/pupPan/pupPan",
-    "van-empty": "@vant/weapp/empty/index"
+    "van-empty": "@vant/weapp/empty/index",
+    "van-loading": "@vant/weapp/loading/index"
     
   },
   "navigationStyle": "custom"

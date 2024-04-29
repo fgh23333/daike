@@ -1,11 +1,14 @@
+
 Page({
   data: {
     username:"靳取",
     userid:100,
+    today:"",
     thedate:{
       year:0,
       month:0,
-      day:0
+      day:0,
+      string:""
     },
     ifshowdate:{
       "left": false,
@@ -22,7 +25,9 @@ Page({
     sortList:["时间顺序","时间倒序","价格降序","价格升序"],
     show:false,
     chooseclass:{},
-    formList:[
+    formList:"",
+    ifLoading:false,
+    testformList:[
       {
         "id": "111",
         "date":"2024-4-28",
@@ -88,10 +93,57 @@ Page({
   onClose() {
     this.setData({ show: false });
   },
-  handleDateChange(e) {
+  dataUpdata(){
+    var nowdate = new Date();
     this.setData({
-      choosedate: e.detail.value
+      ifLoading:true,
+      formList:""
     });
+    setTimeout(()=>{
+      if(this.data.thedate.year==nowdate.getFullYear()&&this.data.thedate.month==nowdate.getMonth()+1&&this.data.thedate.day==nowdate.getDate()){
+        this.setData({
+          formList:this.data.testformList
+        });
+      }
+      this.setData({
+        ifLoading:false,
+      });
+    },1000)
+
+  },
+  handleDateChange(e) {
+    const dateStr = e.detail.value; // 获取日期字符串
+    const dateParts = dateStr.split('-'); // 分割日期字符串
+    const year = parseInt(dateParts[0], 10);
+    const month = parseInt(dateParts[1], 10) - 1; // 注意JavaScript中的月份是从0开始的
+    const day = parseInt(dateParts[2], 10);
+
+    const selectedDate = new Date(year, month, day);
+    if (selectedDate.getTime() > (new Date()).getTime()) {
+      this.setData({
+        ifshowdate: {
+          "left": true,
+          "right": true
+        }
+      });
+    } else {
+      this.setData({
+        ifshowdate: {
+          "right": true,
+          "left": false
+        }
+      });
+    }
+    this.setData({
+      choosedate: selectedDate,
+      thedate: {
+        year: year,
+        month: month + 1,
+        day: day,
+        string: year.toString()+"-"+(month+1).toString()+"-"+day.toString()
+      }
+    });
+    this.dataUpdata();
   },
   handleItemClick: function(e) {
     // 通过 e.currentTarget.dataset.item 获取到传递的参数
@@ -106,9 +158,13 @@ Page({
     // });
   },
   goToPublish: function() {
-    console.log('goToPublish');
     wx.switchTab({
       url: '/pages/new2/new2'
+    });
+  },
+  goToMy: function() {
+    wx.switchTab({
+      url: '/pages/index/index'
     });
   },
   onShareAppMessage() {
@@ -120,6 +176,7 @@ Page({
     this.setData({
       selecttime: selectedGender
     });
+    this.dataUpdata();
   },
   sexChange: function(e) {
     const index = e.detail.value;
@@ -127,6 +184,7 @@ Page({
     this.setData({
       selectsex: selectedGender
     });
+    this.dataUpdata();
   },
   sortChange: function(e) {
     const index = e.detail.value;
@@ -134,6 +192,7 @@ Page({
     this.setData({
       selectSortType: selectedGender
     });
+    this.dataUpdata();
   },
   nextDay: function() {
     var date =  new Date(this.data.choosedate);
@@ -143,21 +202,23 @@ Page({
     if(date.getTime() > nowdate.getTime()){
       ifshow.left = true;
     }
-
-
     this.setData({
       choosedate: date,
       ifshowdate:ifshow,
       thedate:{
         year:date.getFullYear(),
         month:date.getMonth()+1,
-        day:date.getDate()
+        day:date.getDate(),
+        string:date.getFullYear().toString()+"-"+(date.getMonth()+1).toString()+"-"+date.getDate().toString()
       }
     });
+    this.dataUpdata();
   },
   upDay: function() {
     var date =  new Date(this.data.choosedate);
     var ifshow = this.data.ifshowdate;
+    if(date.getTime() > new Date().getTime()){
+
     date.setDate(date.getDate() - 1);
     if(date.getTime() < new Date().getTime()){
       ifshow.left = false;
@@ -169,9 +230,12 @@ Page({
       thedate:{
         year:date.getFullYear(),
         month:date.getMonth()+1,
-        day:date.getDate()
+        day:date.getDate(),
+        string:date.getFullYear().toString()+"-"+(date.getMonth()+1).toString()+"-"+date.getDate().toString(),
       }
     });
+      this.dataUpdata();
+    }
   },
   onLoad: function() {
     // 获取当前日期
@@ -182,8 +246,11 @@ Page({
       thedate:{
         year:currentDate.getFullYear(),
         month:currentDate.getMonth()+1,
-        day:currentDate.getDate()
-      }
+        day:currentDate.getDate(),
+        string:currentDate.getFullYear().toString()+"-"+(currentDate.getMonth()+1).toString()+"-"+currentDate.getDate().toString()
+      },
+        formList: this.data.testformList,
+      today:currentDate.getFullYear().toString()+"-"+(currentDate.getMonth()+1).toString()+"-"+currentDate.getDate().toString()
     });
   }
 });
