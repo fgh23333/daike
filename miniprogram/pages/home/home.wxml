@@ -27,19 +27,27 @@
         <image class="self-start image_8" src="https://onlineimg.alni.eu.org/raw/homepage/homebaojia.png" />
         <view class="flex-col self-stretch group_5">
           <view class="flex-row justify-center items-center relative section_10">
-            <view class="flex-row items-center pos_11" bindtap="upDay" wx:if="{{ifshowdate.left}}">
+            <view class="flex-row items-center pos_11" bindtap="upDay" wx:if="{{ifshowdate.left && !allDate}}">
             <image class="shrink-0 image_9 ml-7" src="https://onlineimg.alni.eu.org/raw/homepage/homeleft.png" />
               <text class="font_2 text_8">前一天</text>
-              
+            </view>
+            <view class="flex-row items-center pos_11" bindtap="allthedate" wx:if="{{!ifshowdate.left && !allDate}}">
+            <image class="shrink-0 image_9 ml-7" src="https://onlineimg.alni.eu.org/raw/homepage/homeleft.png" />
+              <text class="font_2 text_8">所有日期</text>
             </view>
             <picker class="flex-row items-center picker_1" bindchange="handleDateChange" mode="date" value="{{thedate.string}}" start="{{today}}">
             <view class="flex-row items-center">
               <image class="shrink-0 image_10" src="https://onlineimg.alni.eu.org/raw/homepage/homedata.png" />
-              <text class="font_3 text_9 ml-5">{{thedate.year}}-{{thedate.month}}-{{thedate.day}}</text>
+              <text wx:if="{{!allDate}}" class="font_3 text_9 ml-5">{{thedate.year}}-{{thedate.month}}-{{thedate.day}}</text>
+              <text wx:if="{{allDate}}" class="font_3 text_9 ml-5">所有日期</text>
               </view>
             </picker>
-            <view class="flex-row items-center pos_5" bindtap="nextDay" wx:if="{{ifshowdate.right}}">
+            <view class="flex-row items-center pos_5" bindtap="nextDay" wx:if="{{ifshowdate.right && !allDate}}">
               <text class="font_2 text_8">后一天</text>
+              <image class="shrink-0 image_9 ml-7" src="https://onlineimg.alni.eu.org/raw/homepage/homeright.png" />
+            </view>
+            <view class="flex-row items-center pos_5" bindtap="choosethedate" wx:if="{{ifshowdate.right && allDate}}">
+              <text class="font_2 text_8">选择日期</text>
               <image class="shrink-0 image_9 ml-7" src="https://onlineimg.alni.eu.org/raw/homepage/homeright.png" />
             </view>
           </view>
@@ -134,5 +142,6 @@
       </view>
     </view>
     <van-button  type="info" round size="large" bind:click="getdate">button</van-button>
+    <view>{{testdate}}</view>
   </view>
 </view>

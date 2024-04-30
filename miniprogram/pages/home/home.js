@@ -4,6 +4,7 @@ Page({
     username:"靳取",
     userid:100,
     today:"",
+    allDate:true,
     thedate:{
       year:0,
       month:0,
@@ -84,14 +85,30 @@ Page({
         "classroom":"1103"
       },
     ],
+    testdate:"1"
   },
   getdate(){
     db.collection("orderForm").get({
       success:res=>{
-        console.log(res.data)
+        console.log(res.data[0]);
+        this.setData({
+          testdate: res.data[0].className
+        })
       }
 
     })
+  },
+  choosethedate(){
+    this.setData({
+      allDate:false
+    });
+    this.dataUpdata();
+  },
+  allthedate(){
+    this.setData({
+      allDate:true
+    })
+    this.dataUpdata();
   },
   showPopup() {
     console.log(111);
@@ -143,6 +160,7 @@ Page({
       });
     }
     this.setData({
+      allDate:false,
       choosedate: selectedDate,
       thedate: {
         year: year,
