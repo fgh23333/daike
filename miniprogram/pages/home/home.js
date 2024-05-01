@@ -125,33 +125,67 @@ Page({
           }
       )
     });
-    this.setData({
-      formList:myList
-    })
+    if(myList.length <= 0){
+      this.setData({
+        formList:"",
+        ifLoading:false
+      })
+    }
+    else{
+      this.setData({
+        formList:myList,
+        ifLoading:false
+      })
+    }
+
   },
   getdate(){
-    db.collection("orderForm").get({
-      success:res=>{
-        console.log(res.data);
-        this.setData({
-          origndata:res.data
-        });
-        this.transformData();
-      }
+    this.setData({
+      ifLoading:true,
+      formList:""
+    });
+    if(this.data.allDate){
+      db.collection("orderForm").get({
+        success:res=>{
+          this.setData({
+            origndata:res.data
+          });
+          this.transformData();
+        }
 
-    })
+      })
+    }
+    else{
+      var sdata = new Date(this.data.thedate.year,this.data.thedate.month-1,this.data.thedate.day,0,0,0);
+      var edata = new Date(this.data.thedate.year,this.data.thedate.month-1,this.data.thedate.day,23,59,59);
+      db.collection("orderForm").where({
+        classStartTime: {
+          $gte: sdata,
+          $lte: edata
+        }
+      }).get({
+        success:res=>{
+          console.log(res.data);
+          this.setData({
+            origndata:res.data
+          });
+          this.transformData();
+        }
+
+      })
+    }
   },
   choosethedate(){
     this.setData({
       allDate:false
     });
-    this.dataUpdata();
+    this.getdate();
   },
   allthedate(){
     this.setData({
       allDate:true
     })
-    this.dataUpdata();
+    this.getdate();
   },
   showPopup() {
     console.log(111);
@@ -212,7 +246,7 @@ Page({
         string: year.toString()+"-"+(month+1).toString()+"-"+day.toString()
       }
     });
-    this.dataUpdata();
+    this.getdate();
   },
   handleItemClick: function(e) {
     // 通过 e.currentTarget.dataset.item 获取到传递的参数
@@ -245,7 +279,7 @@ Page({
     this.setData({
       selecttime: selectedGender
     });
-    this.dataUpdata();
+    this.getdate();
   },
   sexChange: function(e) {
     const index = e.detail.value;
@@ -253,7 +287,7 @@ Page({
     this.setData({
       selectsex: selectedGender
     });
-    this.dataUpdata();
+    this.getdate();
   },
   sortChange: function(e) {
     const index = e.detail.value;
@@ -261,7 +295,7 @@ Page({
     this.setData({
       selectSortType: selectedGender
     });
-    this.dataUpdata();
+    this.getdate();
   },
   nextDay: function() {
     var date =  new Date(this.data.choosedate);
@@ -281,7 +315,7 @@ Page({
         string:date.getFullYear().toString()+"-"+(date.getMonth()+1).toString()+"-"+date.getDate().toString()
       }
     });
-    this.dataUpdata();
+    this.getdate();
   },
   upDay: function() {
     var date =  new Date(this.data.choosedate);
@@ -303,7 +337,7 @@ Page({
         string:date.getFullYear().toString()+"-"+(date.getMonth()+1).toString()+"-"+date.getDate().toString(),
       }
     });
-      this.dataUpdata();
+      this.getdate();
     }
   },
   onLoad: function() {
@@ -318,8 +352,10 @@ Page({
         day:currentDate.getDate(),
         string:currentDate.getFullYear().toString()+"-"+(currentDate.getMonth()+1).toString()+"-"+currentDate.getDate().toString()
       },
-        formList: this.data.testformList,
+      allDate:true,
+      ifloading:true,
       today:currentDate.getFullYear().toString()+"-"+(currentDate.getMonth()+1).toString()+"-"+currentDate.getDate().toString()
     });
+    this.getdate();
   }
 });

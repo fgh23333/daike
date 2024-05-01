@@ -146,6 +146,5 @@
       </view>
     </view>
     <van-button  type="info" round size="large" bind:click="getdate">button</van-button>
-    <view>{{testdate}}</view>
   </view>
 </view>
