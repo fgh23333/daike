@@ -92,6 +92,10 @@
             <view wx:if="{{formList}}">
             <view wx:for="{{formList}}" wx:key="index" data-item="{{item}}" bindtap="handleItemClick">
               <view class="flex-col self-stretch section_15 fade-animation">
+                <view class="flex-row items-center section_19">
+                  <text class="text_27" wx:if="{{allDate}}">{{item.date}}</text>
+                  <text class="text_28" wx:if="{{userid === item.postUser}}">我发布的</text>
+                </view>
                 <view class="flex-row">
                 <text class="self-start text_16">{{item.time}}</text>
                 <view class="section_17">{{item.classname}}</view>

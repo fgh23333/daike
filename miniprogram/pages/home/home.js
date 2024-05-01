@@ -2,7 +2,7 @@ const db = wx.cloud.database()
 Page({
   data: {
     username:"靳取",
-    userid:100,
+    userid:"b787f7c3662f8ef800060bd76e2f1643",
     today:"",
     allDate:true,
     thedate:{
@@ -28,6 +28,7 @@ Page({
     chooseclass:{},
     formList:"",
     ifLoading:false,
+    origndata:"",
     testformList:[
       {
         "id": "111",
@@ -37,7 +38,8 @@ Page({
         "money":"35",
         "sex":"不限",
         "detail":"一段测试文字。一段测试文字。一段测试文字。一段测试文字。一段测试文字。一段测试文字。",
-        "classroom":"1102"
+        "classroom":"1102",
+        "postUser":"b787f7c3662f8ef800060bd76e2f1643"
       },
       {
         "id": "222",
@@ -87,13 +89,54 @@ Page({
     ],
     testdate:"1"
   },
+  zeroTransform(num){
+    if(num===0){
+      return "00";
+    }else if(num<10){
+      return "0" + num;
+    }else{
+      return num;
+    }
+  },
+  transformData(){
+    let myList = new Array();
+    this.data.origndata.forEach((value, index, arr) => {
+      let thesex = "";
+      if(value.needSex === 0){
+        thesex = "女";
+      }else if(value.needSex === 1){
+        thesex = "男";
+      }else{
+        thesex = "不限";
+      }
+      myList.push(
+          {
+            "id": value._id,
+            index: index,
+            "date": value.classStartTime.getFullYear() + "-" + (value.classStartTime.getMonth() + 1) + "-" + value.classStartTime.getDate(),
+            "time": this.zeroTransform(value.classStartTime.getHours()) + ":" + this.zeroTransform(value.classStartTime.getMinutes()) + "-" + this.zeroTransform(value.classEndTime.getHours()) + ":" + this.zeroTransform(value.classEndTime.getMinutes()),
+            "classname": value.className,
+            "money": value.price,
+            "sex": thesex,
+            "detail": value.detail,
+            "classroom": value.classroom,
+            "postUser": value.postUser,
+            "needQuestion": value.needQuestion
+          }
+      )
+    });
+    this.setData({
+      formList:myList
+    })
+  },
   getdate(){
     db.collection("orderForm").get({
       success:res=>{
-        console.log(res.data[0]);
+        console.log(res.data);
         this.setData({
-          testdate: res.data[0].className
-        })
+          origndata:res.data
+        });
+        this.transformData();
       }
 
     })
