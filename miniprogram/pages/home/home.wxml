@@ -129,10 +129,10 @@
             </view>
             </view>
             <view wx:if="{{!formList}}">
-              <view wx:if="{{!ifLoading}}">
+              <view wx:if="{{ifLoading===0}}">
               <van-empty image="https://onlineimg.alni.eu.org/raw/homepage/homenofound.png" description="没有找到任何结果呢，嘤嘤嘤QWQ" /></view>
             </view>
-            <view wx:if="{{ifLoading}}" class="section_18">
+            <view wx:if="{{ifLoading===1}}" class="section_18">
               <van-loading size="24px" color="#1989fa">加载中...</van-loading>
           </view>
           </view>
@@ -145,6 +145,6 @@
         </van-popup>
       </view>
     </view>
-    <van-button  type="info" round size="large" bind:click="getdate">button</van-button>
+<!--    <van-button  type="info" round size="large" bind:click="getdate">button</van-button>-->
   </view>
 </view>

@@ -4,11 +4,11 @@
       <view class="flex-row items-center self-stretch">
         <image
           class="shrink-0 popimage"
-          src="https://onlineimg.alni.eu.org/raw/homepage/head.jpg"
+          src="{{classData.postUserImgUrl}}"
         />
         <view class="flex-col shrink-0 group_2 ml-8-5">
-          <text class="self-start font text">Yutian</text>
-          <text class="mt-10 self-stretch font text_2">2024-4-28 10:47 发布</text>
+          <text class="self-start font text">{{classData.postUsername}}</text>
+          <text class="mt-10 self-stretch font text_2">{{classData.postTime}} 发布</text>
         </view>
       </view>
       <view class="group_7">
@@ -47,8 +47,8 @@
         <text class="text_14 ml-7">{{classData.money}}</text>
       </view>
       <view class="ml-26 flex-row">
-        <van-button plain type="info" round size="normal" class="button_1">聊一聊</van-button>
-        <van-button type="info" round size="normal" class="button_2">立即接单</van-button>
+        <van-button bind:tap="chart" plain type="info" round size="normal" class="button_1">聊一聊</van-button>
+        <van-button bind:tap="dealit" type="info" round size="normal" class="button_2">立即接单</van-button>
       </view>
     </view>
   </view>

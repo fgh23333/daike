@@ -20,73 +20,15 @@ Page({
     userimg:"https://onlineimg.alni.eu.org/raw/homepage/head.jpg",
     selecttime:"全时段",
     timeslots:['全时段','8:15~9:50','10:05~11:40','13:00~14:35','14:45~16:20','18:00~19:35','18:00~20:30'],
-    sexlist:['男', '女', '性别不限'],
-    selectsex:"性别不限",
+    sexlist:['所有','男', '女', '性别不限'],
+    selectsex:"所有",
     selectSortType:"时间顺序",
     sortList:["时间顺序","时间倒序","价格降序","价格升序"],
     show:false,
     chooseclass:{},
     formList:"",
-    ifLoading:false,
+    ifLoading:0,
     origndata:"",
-    testformList:[
-      {
-        "id": "111",
-        "date":"2024-4-28",
-        "time":"8:15-9:50",
-        "classname":"高等数学",
-        "money":"35",
-        "sex":"不限",
-        "detail":"一段测试文字。一段测试文字。一段测试文字。一段测试文字。一段测试文字。一段测试文字。",
-        "classroom":"1102",
-        "postUser":"b787f7c3662f8ef800060bd76e2f1643"
-      },
-      {
-        "id": "222",
-        "time":"10:05-11:40",
-        "classname":"程序设计",
-        "money":"25",
-        "sex":"男",
-        "detail":"",
-        "classroom":"1103"
-      },
-      {
-        "id": "333",
-        "time":"13:00-14:35",
-        "classname":"英语视听说",
-        "money":"45",
-        "sex":"女",
-        "detail":"",
-        "classroom":"1109"
-      },
-      {
-        "id": "444",
-        "time":"8:15-9:50",
-        "classname":"高等数学",
-        "money":"35",
-        "sex":"不限",
-        "detail":"",
-        "classroom":"1102"
-      },
-      {
-        "id": "555",
-        "time":"10:05-11:40",
-        "classname":"程序设计",
-        "money":"25",
-        "sex":"男",
-        "detail":"",
-        "classroom":"1101"
-      },
-      {
-        "id": "666",
-        "time":"13:00-14:35",
-        "classname":"英语视听说",
-        "money":"45",
-        "sex":"女",
-        "detail":"",
-        "classroom":"1103"
-      },
-    ],
     testdate:"1"
   },
   zeroTransform(num){
@@ -116,6 +58,7 @@ Page({
             "date": value.classStartTime.getFullYear() + "-" + (value.classStartTime.getMonth() + 1) + "-" + value.classStartTime.getDate(),
             "time": this.zeroTransform(value.classStartTime.getHours()) + ":" + this.zeroTransform(value.classStartTime.getMinutes()) + "-" + this.zeroTransform(value.classEndTime.getHours()) + ":" + this.zeroTransform(value.classEndTime.getMinutes()),
             "classname": value.className,
+            "postTime": value.postTime.getFullYear() + "-" + (value.postTime.getMonth() + 1) + "-" + value.postTime.getDate() + " " + this.zeroTransform(value.postTime.getHours()) + ":" + this.zeroTransform(value.postTime.getMinutes()) + ":" + this.zeroTransform(value.postTime.getSeconds()),
             "money": value.price,
             "sex": thesex,
             "detail": value.detail,
@@ -128,52 +71,65 @@ Page({
     if(myList.length <= 0){
       this.setData({
         formList:"",
-        ifLoading:false
+        ifLoading:0
       })
     }
     else{
       this.setData({
         formList:myList,
-        ifLoading:false
+        ifLoading:0
       })
     }
 
   },
   getdate(){
     this.setData({
-      ifLoading:true,
+      ifLoading:1,
       formList:""
     });
     if(this.data.allDate){
-      db.collection("orderForm").get({
-        success:res=>{
-          this.setData({
-            origndata:res.data
-          });
-          this.transformData();
-        }
+      var sdata = new Date();
+      var edata = new Date(2100,12,31,23,59,59);
 
-      })
     }
     else{
       var sdata = new Date(this.data.thedate.year,this.data.thedate.month-1,this.data.thedate.day,0,0,0);
       var edata = new Date(this.data.thedate.year,this.data.thedate.month-1,this.data.thedate.day,23,59,59);
-      db.collection("orderForm").where({
-        classStartTime: {
-          $gte: sdata,
-          $lte: edata
-        }
-      }).get({
-        success:res=>{
-          console.log(res.data);
-          this.setData({
-            origndata:res.data
-          });
-          this.transformData();
-        }
 
-      })
     }
+    var thesex = {"st":0,"ed":2};
+    if(this.data.selectsex==="男"){
+      thesex.st = 1;
+      thesex.ed = 1;
+    }
+    if(this.data.selectsex==="女"){
+      thesex.st = 0;
+      thesex.ed = 0;
+    }
+    if(this.data.selectsex==="性别不限"){
+      thesex.st = 2;
+      thesex.ed = 2;
+    }
+
+    db.collection("orderForm").where({
+      classStartTime: {
+        $gte: sdata,
+        $lte: edata
+      },
+      needSex: {
+        $gte: thesex.st,
+        $lte: thesex.ed
+      }
+    }).get({
+      success:res=>{
+        console.log(res.data);
+        this.setData({
+          origndata:res.data
+        });
+        this.transformData();
+      }
+
+    })
   },
   choosethedate(){
     this.setData({
@@ -194,24 +150,6 @@ Page({
 
   onClose() {
     this.setData({ show: false });
-  },
-  dataUpdata(){
-    var nowdate = new Date();
-    this.setData({
-      ifLoading:true,
-      formList:""
-    });
-    setTimeout(()=>{
-      if(this.data.thedate.year==nowdate.getFullYear()&&this.data.thedate.month==nowdate.getMonth()+1&&this.data.thedate.day==nowdate.getDate()){
-        this.setData({
-          formList:this.data.testformList
-        });
-      }
-      this.setData({
-        ifLoading:false,
-      });
-    },1000)
-
   },
   handleDateChange(e) {
     const dateStr = e.detail.value; // 获取日期字符串
@@ -250,11 +188,23 @@ Page({
   },
   handleItemClick: function(e) {
     // 通过 e.currentTarget.dataset.item 获取到传递的参数
-    let clickedItem = e.currentTarget.dataset.item;
-    console.log('点击的 item 是：', clickedItem);
+    var clickedItem = e.currentTarget.dataset.item;
+
+    db.collection("users").where({
+      "_id": clickedItem.postUser
+    }).get({
+      success:res=>{
+        clickedItem['postUsername'] = res.data[0].username;
+        clickedItem['postUserimg'] = res.data[0].userImgUrl;
+
+      }
+
+    });
+    
     this.setData({
       chooseclass : clickedItem
     });
+    console.log(this.data.chooseclass);
     this.showPopup();
     // wx.navigateTo({
     //   url: `/pages/detail/detail?itemId=${encodeURIComponent(clickedItem.id)}`, // 通过URL传递参数
@@ -353,7 +303,7 @@ Page({
         string:currentDate.getFullYear().toString()+"-"+(currentDate.getMonth()+1).toString()+"-"+currentDate.getDate().toString()
       },
       allDate:true,
-      ifloading:true,
+      ifloading:1,
       today:currentDate.getFullYear().toString()+"-"+(currentDate.getMonth()+1).toString()+"-"+currentDate.getDate().toString()
     });
     this.getdate();
