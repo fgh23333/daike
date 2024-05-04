@@ -189,23 +189,41 @@ Page({
   handleItemClick: function(e) {
     // 通过 e.currentTarget.dataset.item 获取到传递的参数
     var clickedItem = e.currentTarget.dataset.item;
-
-    db.collection("users").where({
-      "_id": clickedItem.postUser
-    }).get({
-      success:res=>{
-        clickedItem['postUsername'] = res.data[0].username;
-        clickedItem['postUserimg'] = res.data[0].userImgUrl;
-
-      }
-
+    wx.showLoading({  // 显示加载中loading效果 
+      title: "加载中...",
+      mask: true  //开启蒙版遮罩
     });
-    
+db.collection("users").where({
+  "_id": clickedItem.postUser
+}).get({
+  success: (res) => {
+    clearTimeout(timeout); // 清除定时器，表示请求成功
+    clickedItem['postUsername'] = res.data[0].username;
+    clickedItem['postUserimg'] = res.data[0].userImgUrl;
     this.setData({
       chooseclass : clickedItem
     });
-    console.log(this.data.chooseclass);
+    wx.hideLoading();
     this.showPopup();
+  },
+  fail: (err) => {
+    wx.hideLoading();
+    // 这里可以处理查询失败的情况
+    console.error('数据库查询失败', err);
+  }
+});
+
+const timeout = setTimeout(() => {
+  wx.hideLoading();
+  wx.showToast({
+    title: '加载超时',
+    icon: 'none',
+  });
+  // 这里可以添加更多的超时处理逻辑
+}, 3000);
+
+    
+
     // wx.navigateTo({
     //   url: `/pages/detail/detail?itemId=${encodeURIComponent(clickedItem.id)}`, // 通过URL传递参数
     // });

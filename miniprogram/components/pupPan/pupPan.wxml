@@ -4,7 +4,7 @@
       <view class="flex-row items-center self-stretch">
         <image
           class="shrink-0 popimage"
-          src="{{classData.postUserImgUrl}}"
+          src="{{classData.postUserimg}}"
         />
         <view class="flex-col shrink-0 group_2 ml-8-5">
           <text class="self-start font text">{{classData.postUsername}}</text>
