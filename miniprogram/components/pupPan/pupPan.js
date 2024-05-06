@@ -58,7 +58,11 @@ Component({
 				icon: 'none',
 				duration: 2000
 			})
-
+      goTodetail2: function aa() {
+        wx.navigateTo({
+          url: '/pages/detail2/detail2'
+        });
+      }
 		}
 
 	}

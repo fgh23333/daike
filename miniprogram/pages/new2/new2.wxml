@@ -1,6 +1,6 @@
 <view class="flex-col page">
 	<view class="flex-row justify-between section">
-		<text class="self-start text"></text>
+		<image class="image_zuiqian" src="https://onlineimg.alni.eu.org/raw/daike/launch(new2)/%E8%93%9D%E7%99%BD%E8%89%B2%E5%86%99%E5%AE%9E%E7%94%B5%E4%BF%A1%E5%8F%8D%E8%AF%88%E9%AA%97%E5%AE%A3%E4%BC%A0%E6%89%8B%E6%9C%BA%E6%B5%B7%E6%8A%A5%20(3).png"></image>
 	</view>
 	<form class="biaodanshuxing">
 		<view class="flex-col relative section_2">
@@ -37,7 +37,7 @@
 				
 				<view class="flex-row group justify-between input group_2 group_1 height_1">
 
-					<text class="font_1 text_7" item-align="center" style="align-items: center;">微信/电话</text>
+					<text class="font_1 text_7" item-align="center" style="align-items: center;">微信/电话号</text>
 					<input class="text_8 font text_1" type="text" placeholder="请输入微信号/电话号" style="text-align: right;" />
 				</view>
 
@@ -45,7 +45,11 @@
             
         <picker mode="multiSelector" range="{{monthDayTime}}" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange">
           <view class="flex-row justify-between group_7 group_2">
-              <text class="font_1 text_02">选择时间</text>
+              <view class="shuiping">
+              <text class="font_1">选择上课时间</text>
+              
+              <image class="image_detail" style="text-align: left;" src="https://onlineimg.alni.eu.org/raw/daike/global/help.png"/>
+              </view>
               <view class="flex-row group_3">
 								<text class="font text_3">{{selectedtime}}</text>
 								<image class="ml-8 shrink-0 image_2" style="text-align: right;" src="https://onlineimg.alni.eu.org/raw/daike/launch(new2)/right.png" />
@@ -54,7 +58,7 @@
         </picker>
         
 					<view class="flex-row justify-between group_7 height_1 group">
-						<text class="font_1 text_11">时间</text>
+						<text class="font_1 text_11">自定义上课时间</text>
 						<input class="text_22 font" type="text" placeholder="已选时间段则无需填写" style="text-align: right;" />
 					</view>
           <view class="flex-row justify-between group_7 height_1 group ">

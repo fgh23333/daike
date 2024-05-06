@@ -45,9 +45,11 @@
         <text class="text_14 ml-7">35</text>
       </view>
       <view class="ml-26 flex-row">
-        <view class="flex-col justify-start items-center text-wrapper"><text class="font text_12">询问</text></view>
+        <view class="flex-col justify-start items-center text-wrapper">
+          <button bindtap="goTodetail2" class="font text_13">详情</button>
+        </view>
         <view class="flex-col justify-start items-center text-wrapper_2 ml-5">
-          <text class="font text_13">立即接单</text>
+          <button bindtap="aaa" class="font text_13">立即接单</button>
         </view>
       </view>
     </view>

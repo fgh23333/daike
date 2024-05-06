@@ -5,7 +5,8 @@
     "pages/new2/new2",
     "pages/index/index",
     "pages/detail/detail",
-    "pages/phone/phone"
+    "pages/phone/phone",
+    "pages/detail2/detail2"
   ],
   "window": {
     "navigationBarTextStyle": "black",

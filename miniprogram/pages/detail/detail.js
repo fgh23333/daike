@@ -2,6 +2,7 @@
 Page({
   data: {
     classid:"",
+    a:0
   },
 
   onLoad: function(options) {
@@ -17,5 +18,6 @@ Page({
 
   someFunction: function(event) {
     // 自定义函数处理
-  }
+  },
+  
 });

@@ -13,6 +13,7 @@
       </view>
       <view class="group_7">
         <text class="text_3">{{classData.classname}}</text>
+        <text bind:tap="goTodetail2">详情</text>
       </view>
       <view class="flex-row self-stretch group_3">
         <image
