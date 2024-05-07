@@ -1,2 +1,62 @@
-<!--pages/detail2/detail2.wxml-->
-<text>pages/detail2/detail2.wxml{{classid}}</text>
+<view class="flex-col justify-start relative page">
+  <view class="section"></view>
+  <image
+    class="image pos"
+    src="https://onlineimg.alni.eu.org/raw/daike/launch(new2)/%E8%93%9D%E7%99%BD%E8%89%B2%E5%86%99%E5%AE%9E%E7%94%B5%E4%BF%A1%E5%8F%8D%E8%AF%88%E9%AA%97%E5%AE%A3%E4%BC%A0%E6%89%8B%E6%9C%BA%E6%B5%B7%E6%8A%A5%20(4).png"
+  />
+  <view class="flex-col section_2 pos_2">
+    <view class="flex-row justify-end items-center group">
+      <text class="font text">我叫夹心奥利奥</text>
+      <image
+        class="image_2 ml-9"
+        src="https://ide.code.fun/api/image?token=6639e024d578370011c63575&name=3f5e0f1efeea5f3eaee2f3c7ebc17009.png"
+      />
+    </view>
+    <view class="mt-10 flex-col">
+      <text class="self-end font text_2">2024/5/7 13:00发布</text>
+      <view class="mt-8 flex-col self-stretch section_3">
+        <view class="flex-row justify-between items-baseline">
+          <text class="font text_4">课程</text>
+          <text class="font_2 text_3">高等数学</text>
+        </view>
+        <view class="mt-26 flex-col">
+          <view class="flex-row justify-between">
+            <text class="self-center font">时间</text>
+            <view class="flex-row items-baseline group_2">
+              <text class="shrink-0 text_6">5月10号</text>
+              <text class="ml-12 text_5">8:15-9:50</text>
+            </view>
+          </view>
+          <view class="mt-22 flex-row justify-between items-baseline">
+            <text class="font text_8">价格</text>
+            <text class="font_2 text_7">￥30</text>
+          </view>
+        </view>
+      </view>
+      <view class="mt-8 flex-col self-center section_4">
+        <view class="grid">
+          <view class="flex-col items-center grid-item ">
+            <text class="font_3">教室</text>
+            <text class="font_4 text_9 mt-15">{{classData.id.classroom}}</text>
+          </view>
+          <view class="flex-col items-center grid-item ">
+            <text class="font_3">性别</text>
+            <text class="mt-14 font_4 text_9">男</text>
+          </view>
+          <view class="flex-col items-center grid-item shangbianju">
+            <text class="font_3">需要回答问题</text>
+            <text class="font_4 text_9 mt-17">不需要</text>
+          </view>
+          <view class="flex-col items-center grid-item shangbianju">
+            <text class="font_3">可以玩手机</text>
+            <text class="mt-16 font_4 text_9">可以</text>
+          </view>
+        </view>
+        <view class="mt-20 flex-row group_3">
+          <text class="font_3">订单备注：</text>
+          <text class="font_3 text_10">可以玩金铲铲</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

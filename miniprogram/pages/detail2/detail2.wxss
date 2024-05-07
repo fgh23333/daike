@@ -1,1 +1,157 @@
-/* pages/detail2/detail2.wxss */
+.ml-9 {
+  margin-left: 18rpx;
+}
+.mt-15 {
+  margin-top: 30rpx;
+}
+.mt-17 {
+  margin-top: 34rpx;
+}
+.page {
+  background-color: #ffffff;
+  background-image: url('https://onlineimg.alni.eu.org/raw/daike/launch(new2)/%E8%93%9D%E7%99%BD%E8%89%B2%E5%86%99%E5%AE%9E%E7%94%B5%E4%BF%A1%E5%8F%8D%E8%AF%88%E9%AA%97%E5%AE%A3%E4%BC%A0%E6%89%8B%E6%9C%BA%E6%B5%B7%E6%8A%A5.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+}
+.section {
+  background-image: url('https://ide.code.fun/api/image?token=6639e024d578370011c63575&name=0f1d9a8a9f943a5fc88f5888ec9cf6dc.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 750rpx;
+  height: 1334rpx;
+}
+.image {
+  width: 354rpx;
+  height: 142rpx;
+}
+.pos {
+  position: absolute;
+  left: 50rpx;
+  top: 56rpx;
+}
+.section_2 {
+  padding: 36rpx 0 90rpx;
+  background-color: #ffffff;
+  border-radius: 40rpx;
+}
+.pos_2 {
+  position: absolute;
+  left: 50rpx;
+  right: 48rpx;
+  top: 230rpx;
+}
+.group {
+  padding: 0 54rpx;
+}
+.font {
+  font-size: 24rpx;
+  font-family: SourceHanSansCN;
+  line-height: 21.96rpx;
+  color: #808080;
+}
+.text {
+  color: #000000;
+  line-height: 22.22rpx;
+}
+.image_2 {
+  border-radius: 50%;
+  width: 66rpx;
+  height: 66rpx;
+}
+.text_2 {
+  margin-right: 30rpx;
+  line-height: 28rpx;
+  width: 250rpx;
+}
+.section_3 {
+  padding: 44rpx 52rpx 36rpx;
+  background-color: #ffffff;
+}
+.text_4 {
+  line-height: 21.72rpx;
+}
+.font_2 {
+  font-size: 36rpx;
+  font-family: SourceHanSansCN;
+  font-weight: 700;
+}
+.text_3 {
+  margin-right: 80rpx;
+  color: #000000;
+  line-height: 34.3rpx;
+}
+.group_2 {
+  margin-right: 50rpx;
+}
+.text_6 {
+  color: #000000;
+  font-size: 28rpx;
+  font-family: SourceHanSansCN;
+  line-height: 34rpx;
+}
+.text_5 {
+  color: #000000;
+  font-size: 44rpx;
+  font-family: AlibabaPuHuiTi;
+  font-weight: 700;
+  line-height: 52rpx;
+}
+.text_8 {
+  line-height: 22.32rpx;
+}
+.text_7 {
+  margin-right: 115rpx;
+  font-size: 44rpx;
+  color: #ff3333;
+  line-height: 27.64rpx;
+}
+.section_4 {
+  padding-bottom: 140rpx;
+  background-color: #6b9cff;
+  border-radius: 40rpx;
+  width: 546rpx;
+}
+.grid {
+  padding-bottom: 152rpx;
+  height: 305.42rpx;
+  display: grid;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  row-gap: 0;
+  column-gap: 0;
+}
+.grid-item {
+  padding: 32rpx 12rpx;
+  width: 273rpx;
+}
+.shangbianju{
+  margin-top: 50rpx;
+}
+.font_3 {
+  font-size: 28rpx;
+  font-family: SourceHanSansCN;
+  line-height: 26.44rpx;
+  font-weight: 700;
+  color: #ffffff;
+}
+.font_4 {
+  font-size: 36rpx;
+  font-family: AlibabaPuHuiTi;
+  line-height: 26.44rpx;
+  color: #ffffff;
+}
+.text_9 {
+  line-height: 25.7rpx;
+}
+.group_3 {
+  padding: 0 48rpx;
+}
+.text_10 {
+  margin-left: -8rpx;
+  line-height: 26.18rpx;
+  font-weight: unset;
+}

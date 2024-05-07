@@ -61,6 +61,10 @@
 						<text class="font_1 text_11">自定义上课时间</text>
 						<input class="text_22 font" type="text" placeholder="已选时间段则无需填写" style="text-align: right;" />
 					</view>
+          <view class="flex-row justify-between group_7 height_1 group">
+						<text class="font_1 text_11">订单截止时间</text>
+						<input class="text_22 font" type="text" placeholder="填写上课之前的时间" style="text-align: right;" />
+					</view>
           <view class="flex-row justify-between group_7 height_1 group ">
 						<text class="font_1 text_11">教室</text>
 						<input class="text_22 font" type="text" placeholder="请输入教室" style="text-align: right;" />
