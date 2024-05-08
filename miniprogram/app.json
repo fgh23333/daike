@@ -3,6 +3,7 @@
     "pages/home/home",
     "pages/me/me",
     "pages/new2/new2",
+    "pages/new3/new3",
     "pages/index/index",
     "pages/detail/detail",
     "pages/phone/phone",
@@ -23,7 +24,7 @@
         "selectedIconPath": "image/home_fill.png"
       },
       {
-        "pagePath": "pages/new2/new2",
+        "pagePath": "pages/new3/new3",
         "text": "发布",
         "iconPath": "image/new.png",
         "selectedIconPath": "image/new_fill.png"

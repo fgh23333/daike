@@ -1,0 +1,42 @@
+<view class="flex-col page">
+  <view class="flex-row justify-between section">
+    <image class="image_zuiqian" src="https://onlineimg.alni.eu.org/raw/daike/launch(new2)/%E8%93%9D%E7%99%BD%E8%89%B2%E5%86%99%E5%AE%9E%E7%94%B5%E4%BF%A1%E5%8F%8D%E8%AF%88%E9%AA%97%E5%AE%A3%E4%BC%A0%E6%89%8B%E6%9C%BA%E6%B5%B7%E6%8A%A5%20(3).png"></image>
+  </view>
+  <form class="biaodanshuxing">
+    <van-cell-group>
+      <picker mode="selector" range="{{genders}}" bindchange="genderChange">
+        <van-cell title="性别" is-link value="{{selectedGender}}" />
+      </picker>
+      <van-field value="{{ classname }}" label="课程" placeholder="请输入课程名" />
+      <picker mode="selector" range="{{contactArray}}" bindchange="contactChange">
+        <van-cell title="联系方式" is-link value="{{selectedcontact}}" />
+      </picker>
+      <van-field value="{{ phonecall }}" label="微信/电话号" placeholder="请输入微信号/电话号" />
+      <picker bindchange="handleDateChange" mode="date" start="{{today}}">
+        <van-cell title="日期" is-link value="{{thedate.string}}" />
+      </picker>
+      <van-cell title="上课时间" value="{{selecttime}}" />
+      <van-slider value="{{ [5, 6] }}" min="0" max="11" range bind:drag="onChange" custom-class="sider" />
+      <van-field value="{{ phonecall }}" label="其他上课时间" placeholder="已选时间段则无需填写" />
+      <van-field value="{{ endtime }}" label="订单截止时间" placeholder="填写上课之前的时间" />
+      <van-field value="{{ classroom }}" label="教室" placeholder="请输入教室" />
+      <van-field value="{{ price }}" type="number" label="价格" placeholder="请输入数值" />
+      <van-field type="textarea" value="{{ tips }}" label="备注" placeholder="输入备注" autosize/>
+      <view class="flex-row items-center section_5" >
+      <text class="font_1 text_11">需要回答问题/演讲</text>
+      <van-switch checked="{{ checked }}" bind:change="onChange" class="switch_2" />
+      </view>
+      <view class="flex-row items-center section_5" >
+      <text class="font_1 text_11">可以玩手机</text>
+      <van-switch checked="{{ checked_2 }}" bind:change="onChange" class="switch_2" />
+      </view>
+      
+      
+    </van-cell-group>
+    <view style="height: 30rpx;"></view>
+    <view class="button_henguolai">
+      <van-button plain type="info" round size="large" class="button_2 button_cancel">取消</van-button>
+      <van-button type="info" round size="large" class="button_2 button_commit">提交</van-button>
+    </view>
+  </form>
+</view>

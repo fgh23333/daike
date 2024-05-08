@@ -93,5 +93,7 @@
 			<van-button plain type="info" round size="large" class="button_2 button_cancel" >取消</van-button>
         <van-button  type="info" round size="large" class="button_2 button_commit">提交</van-button>
 		</view>
+    <van-slider value="{{ [5, 6] }}" min="0" max="11" range bind:drag="onChange" custom-class="sider" />
+		<view>选择的时间：{{selecttime}}</view>
 	</form>
 </view>
