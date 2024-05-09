@@ -10,6 +10,8 @@
 .sider{
   margin-top: 30rpx;
   margin-bottom: 30rpx;
+  width: 500rpx;
+  margin-left: 30rpx;
 }
 .biaodanshuxing{
   margin-top: -130px;
@@ -135,7 +137,15 @@
   padding: 39.61rpx 2.91rpx 35.72rpx;
 }
 .text_11 {
-  line-height: 25.01rpx;
+  line-height: 50rpxrpx;
+  margin-left: 30rpx;
+}
+.switch_2{
+  position: absolute;
+  right: 30rpx;
+}
+.section_5{
+  height: 85rpx;
 }
 .text_22 {
   margin-right: 19.09rpx;

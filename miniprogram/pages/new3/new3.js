@@ -125,6 +125,13 @@ const  timeendlist=[
 
 Page({
   data: {
+    today: "",
+    thedate: {
+      year: 0,
+      month: 0,
+      day: 0,
+      string: ""
+    },
     genders: ['男', '女', '性别不限'],
     contactArray:['微信','电话','均可'],
     monthDayTime: [[], [], ['8:15~9:50','10:05~11:40','13:00~14:35','14:45~16:20','18:00~19:35','18:00~20:30']], // 存储月、日、时间段的数据
@@ -138,6 +145,24 @@ Page({
       selecttime:timestartlist[event.detail.value[0]].timestr+" - "+timeendlist[event.detail.value[1]].timestr
     })
   },
+
+  handleDateChange(e) {
+    const dateStr = e.detail.value; // 获取日期字符串
+    const dateParts = dateStr.split('-'); // 分割日期字符串
+    const year = parseInt(dateParts[0], 10);
+    const month = parseInt(dateParts[1], 10) - 1; // 注意JavaScript中的月份是从0开始的
+    const day = parseInt(dateParts[2], 10);
+    this.setData({
+      thedate: {
+        year: year,
+        month: month + 1,
+        day: day,
+        string: year.toString() + "-" + (month + 1).toString() + "-" + day.toString()
+      }
+    });
+  },
+
+
   // 下面是性别选择
   genderChange: function(e) {
     const selectedGender = this.data.genders[e.detail.value];
@@ -154,6 +179,16 @@ Page({
   },
   onLoad: function () {
     this.initData();
+    var currentDate = new Date();
+    this.setData({
+      thedate: {
+        year: currentDate.getFullYear(),
+        month: currentDate.getMonth() + 1,
+        day: currentDate.getDate(),
+        string: currentDate.getFullYear().toString() + "-" + (currentDate.getMonth() + 1).toString() + "-" + currentDate.getDate().toString()
+      },
+      today: currentDate.getFullYear().toString() + "-" + (currentDate.getMonth() + 1).toString() + "-" + currentDate.getDate().toString()
+    });
     this.setData({
       selecttime:timestartlist[5].timestr+" - "+timeendlist[6].timestr
     })
