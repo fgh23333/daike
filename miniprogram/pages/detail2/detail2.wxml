@@ -37,7 +37,7 @@
         <view class="grid">
           <view class="flex-col items-center grid-item ">
             <text class="font_3">教室</text>
-            <text class="font_4 text_9 mt-15">{{classData.id.classroom}}</text>
+            <text class="font_4 text_9 mt-15">{{classData.classroom}}</text>
           </view>
           <view class="flex-col items-center grid-item ">
             <text class="font_3">性别</text>
