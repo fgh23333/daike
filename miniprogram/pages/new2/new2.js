@@ -138,6 +138,33 @@ Page({
       selecttime:timestartlist[event.detail.value[0]].timestr+" - "+timeendlist[event.detail.value[1]].timestr
     })
   },
+   /** 跳转到首页页面 */
+   jumpToAssuse() {
+    wx.showModal({
+        title: '提示',
+        content: '是否确认提交',
+        success: function (res) {
+            if (res.confirm) {
+                console.log('用户点击确定')
+                wx.showToast({
+                    title: '成功',
+                    duration: 1000,
+                    success: function () {
+                    setTimeout(function () {
+                    wx.reLaunch({
+                    url: 'pages/home/home',
+                      })
+                    }, 1000);
+                 }
+               })
+                                                        
+            }else{
+               console.log('用户点击取消')
+            }
+
+        }
+    })
+},
   // 下面是性别选择
   genderChange: function(e) {
     const selectedGender = this.data.genders[e.detail.value];

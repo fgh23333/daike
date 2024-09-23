@@ -8,7 +8,7 @@ App({
 
     wx.cloud.init({
       //云环境id
-      env:'cloud1-7g573dsw7885bfe7'
+      env:'test1-4gwutfnwbf1b314d'
     })
     
     // 登录

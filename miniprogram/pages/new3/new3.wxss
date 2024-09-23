@@ -1,6 +1,9 @@
 .mt-52-5 {
   margin-top: 104.72rpx;
 }
+.text-right{
+  text-align: right;
+}
 .image_zuiqian{
   margin-top: 100rpx;
   margin-left: 30rpx;
@@ -31,7 +34,7 @@
 
 .page {
   padding-bottom: 200rpx;
-  background-image: url('https://onlineimg.alni.eu.org/raw/daike/launch(new2)/%E8%93%9D%E7%99%BD%E8%89%B2%E5%86%99%E5%AE%9E%E7%94%B5%E4%BF%A1%E5%8F%8D%E8%AF%88%E9%AA%97%E5%AE%A3%E4%BC%A0%E6%89%8B%E6%9C%BA%E6%B5%B7%E6%8A%A5.png'); /* 图片路径，如果是网络图片需完整URL */
+  background-color:#1b78ff;
   background-size: cover; /* 或其他背景尺寸控制，如contain */
   background-attachment:local;
   height: 100%;

@@ -84,7 +84,7 @@
           <view class="flex-col flex-1">
             <view class="flex-row items-center self-stretch section_12" bindtap="goToPublish">
               <image class="image_11" src="https://onlineimg.alni.eu.org/raw/homepage/homeAdd.png" />
-              <view class="flex-col items-start flex-1 ml-5-5">
+              <view class="flex-col items-start flex-1 ml-5-5" bind:tap="Tonew3">
                 <text class="text_14">发布订单</text>
                 <text class="font_4 text_15 mt-15-5">添加一个代课报价</text>
               </view>

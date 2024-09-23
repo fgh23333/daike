@@ -1,0 +1,3 @@
+<!--pages/aboutus/aboutus.wxml-->
+<button bind:tap="test">getdata</button>
+<view> wx:for="{{data1}}">{{item.username}}-{{item.userpassword}}</view>

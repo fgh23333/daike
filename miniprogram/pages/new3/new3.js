@@ -1,3 +1,4 @@
+const db=wx.cloud.database()
 const timestartlist=[
   {
     timestr:"8:15",
@@ -137,15 +138,64 @@ Page({
     monthDayTime: [[], [], ['8:15~9:50','10:05~11:40','13:00~14:35','14:45~16:20','18:00~19:35','18:00~20:30']], // 存储月、日、时间段的数据
     value: [0, 0, 0], 
     timeslots:['8:15~9:50','10:05~11:40','13:00~14:35','14:45~16:20','18:00~19:35','18:00~20:30'],
+    multiIndex: [0, 0], // 初始索引
+    multiArray: [
+      ['8:15', '10:05', '13:00', '14:45', '18:00'],
+      ['9:50', '11:40', '14:35', '16:20', '19:35', '20:30']
+    ],
     switchValue2: true,
-    selecttime:""
+    selecttime:"",
+    chosen: ''
+  },
+  timechange(e) {
+    console.log('Picker changing', e.detail.value);
+    this.setData({
+      multiIndex: e.detail.value,
+      selecttime: this.getSelectedTime() 
+    });
   },
   onChange(event) {
     this.setData({
-      selecttime:timestartlist[event.detail.value[0]].timestr+" - "+timeendlist[event.detail.value[1]].timestr
+      selecttime:multiArray[event.detail.value[0]].timestr+" - "+multiArray[event.detail.value[1]].timestr
     })
   },
+  getSelectedTime() {
+    const { multiIndex, multiArray } = this.data;
+    const selectedTime = multiArray[0][multiIndex[0]] + ' - ' + multiArray[1][multiIndex[1]];
+    console.log(selectedTime);
+    return selectedTime;
+  },
+  jumpToAssuse() {
+    wx.showModal({
+        title: '提示',
+        content: '是否确认提交',
+        success: function (res) {
+            if (res.confirm) {
+                console.log('用户点击确定')
+                db.collection("orders").add({
+                  data:{
 
+                  }
+                })
+                wx.showToast({
+                    title: '成功',
+                    duration: 1000,
+                    success: function () {
+                    setTimeout(function () {
+                    wx.reLaunch({
+                    url: 'pages/home/home',
+                      })
+                    }, 1000);
+                 }
+               })
+                                                        
+            }else{
+               console.log('用户点击取消')
+            }
+
+        }
+    })
+},
   handleDateChange(e) {
     const dateStr = e.detail.value; // 获取日期字符串
     const dateParts = dateStr.split('-'); // 分割日期字符串
@@ -223,7 +273,30 @@ Page({
       selectedtime:selectedtime,
     });
   },
-
+  formReset(e) {
+    console.log('form发生了reset事件，携带数据为：', e.detail.value)
+    this.setData({
+      chosen: ''
+    })
+  },
+  formSubmit(e) {
+    db.collection("orders").add({
+      data:{
+        classname:e.detail.value.classname,
+        selectedsex:e.detail.value.selectedsex,
+        wxid:e.detail.value.wxid,
+        classdate:e.detail.value.classdate,
+        otherclasstime:e.detail.value.otherclasstime,
+        classtime:e.detail.value.classtime,
+        classroom:e.detail.value.classroom,
+        price:e.detail.value.price,
+        tip:e.detail.value.tip,
+        answer:e.detail.value.answer,
+        playphone:e.detail.value.playphone,
+      }
+    })
+    console.log('form发生了submit事件，携带数据为：', e.detail.value)
+  },
   // onShareAppMessage() {
   //   return {};
   // },

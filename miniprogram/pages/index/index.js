@@ -74,5 +74,11 @@ Page({
 			url: '/pages/phone/phone',
 		})
 		console.log("111");
-	}
+  },
+  toAboutUs:function(){
+    wx.navigateTo({
+      url: '/pages/aboutus/aboutus',
+    })
+    console.log("sucesstoaboutus");
+  }
 })

@@ -17,7 +17,7 @@ Page({
     },
     choosedate: (new Date()).getTime(),
     location: "上海海洋大学",
-    userimg: "https://onlineimg.alni.eu.org/raw/homepage/head.jpg",
+    userimg: "https://onlineimg.alni.eu.org/raw/homepage/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240601213132.jpg",
     selecttime: "全时段",
     timeslots: ['全时段', '8:15~9:50', '10:05~11:40', '13:00~14:35', '14:45~16:20', '18:00~19:35', '18:00~20:30'],
     sexlist: ['所有', '男', '女', '性别不限'],
@@ -79,6 +79,12 @@ Page({
     }
 
   },
+  Tonew3:function(){
+    console.log("qq");
+    wx.navigateTo({
+      url: '/pages/new3/new3',
+    });
+  },
   getdate() {
     this.setData({
       ifLoading: 1,
@@ -110,7 +116,7 @@ Page({
       thesex.ed = 2;
     }
 
-    db.collection("orderForm").where({
+    db.collection("orders").where({
       classStartTime: {
         $gte: sdata,
         $lte: edata
